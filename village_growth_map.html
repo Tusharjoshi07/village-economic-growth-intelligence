@@ -1,0 +1,3422 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_cc4ff0169a51c78e84d39a276453897c {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>
+    
+    
+<div style="position: fixed; bottom: 50px; left: 50px; z-index: 1000;
+     background-color: white; padding: 15px; border-radius: 8px;
+     border: 2px solid grey; font-size: 13px;">
+<b>🏘️ Economic Growth Score</b><br>
+<i style="color:red">●</i> Score ≥ 70 (Very High)<br>
+<i style="color:orange">●</i> Score 40-70 (High)<br>
+<i style="color:green">●</i> Score < 40 (Moderate)<br>
+</div>
+    
+            <div class="folium-map" id="map_cc4ff0169a51c78e84d39a276453897c" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_cc4ff0169a51c78e84d39a276453897c = L.map(
+                "map_cc4ff0169a51c78e84d39a276453897c",
+                {
+                    center: [20.5, 78.9],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 5,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_fec928ac2da78a7b21f3de1a35c556b6 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_fec928ac2da78a7b21f3de1a35c556b6.addTo(map_cc4ff0169a51c78e84d39a276453897c);
+        
+    
+            var marker_cluster_0389070f499ddf5e437106ba13db3a4d = L.markerClusterGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_75bb7b17a615bfe1f767bc6734c6085b = L.circleMarker(
+                [13.088572299208495, 74.0776542487811],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0389070f499ddf5e437106ba13db3a4d);
+        
+    
+        var popup_749d1a71e7194e4e79721f61e18956cc = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_f45efa157b486aacef67c95640b1bfbe = $(`<div id="html_f45efa157b486aacef67c95640b1bfbe" style="width: 100.0%; height: 100.0%;">             <b>Rank #1</b><br>             <b>Bangalore</b><br>             State: KARNATAKA<br>             Growth Score: 100.0<br>             Internet HH: 430,880<br>             Electric HH: 2,330,631         </div>`)[0];
+                popup_749d1a71e7194e4e79721f61e18956cc.setContent(html_f45efa157b486aacef67c95640b1bfbe);
+            
+        
+
+        circle_marker_75bb7b17a615bfe1f767bc6734c6085b.bindPopup(popup_749d1a71e7194e4e79721f61e18956cc)
+        ;
+
+        
+    
+    
+            circle_marker_75bb7b17a615bfe1f767bc6734c6085b.bindTooltip(
+                `<div>
+                     #1 Bangalore — Score: 100.0
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a5bd542e029e8066eeb77ed2850ab9af = L.circleMarker(
+                [19.628590191070632, 77.49575752063932],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0389070f499ddf5e437106ba13db3a4d);
+        
+    
+        var popup_29d139b444b925f2e7fda5b5ff6f2228 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_9655cf05b94fd4542dcbf8a9c3805b4e = $(`<div id="html_9655cf05b94fd4542dcbf8a9c3805b4e" style="width: 100.0%; height: 100.0%;">             <b>Rank #2</b><br>             <b>Mumbai Suburban</b><br>             State: MAHARASHTRA<br>             Growth Score: 89.94<br>             Internet HH: 404,757<br>             Electric HH: 1,964,657         </div>`)[0];
+                popup_29d139b444b925f2e7fda5b5ff6f2228.setContent(html_9655cf05b94fd4542dcbf8a9c3805b4e);
+            
+        
+
+        circle_marker_a5bd542e029e8066eeb77ed2850ab9af.bindPopup(popup_29d139b444b925f2e7fda5b5ff6f2228)
+        ;
+
+        
+    
+    
+            circle_marker_a5bd542e029e8066eeb77ed2850ab9af.bindTooltip(
+                `<div>
+                     #2 Mumbai Suburban — Score: 89.94
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d7567f3b8b628943c70a312dc127c466 = L.circleMarker(
+                [19.57479122230081, 77.00802624909835],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0389070f499ddf5e437106ba13db3a4d);
+        
+    
+        var popup_936a595a0b53a2663a9ab7558eff5297 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_fedd9f297aa9fd66256a26c0991e668e = $(`<div id="html_fedd9f297aa9fd66256a26c0991e668e" style="width: 100.0%; height: 100.0%;">             <b>Rank #3</b><br>             <b>Thane</b><br>             State: MAHARASHTRA<br>             Growth Score: 83.44<br>             Internet HH: 256,170<br>             Electric HH: 2,231,800         </div>`)[0];
+                popup_936a595a0b53a2663a9ab7558eff5297.setContent(html_fedd9f297aa9fd66256a26c0991e668e);
+            
+        
+
+        circle_marker_d7567f3b8b628943c70a312dc127c466.bindPopup(popup_936a595a0b53a2663a9ab7558eff5297)
+        ;
+
+        
+    
+    
+            circle_marker_d7567f3b8b628943c70a312dc127c466.bindTooltip(
+                `<div>
+                     #3 Thane — Score: 83.44
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ad8c69eb88377e22b09284baf4945bf6 = L.circleMarker(
+                [18.1932064453924, 75.77937745103219],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0389070f499ddf5e437106ba13db3a4d);
+        
+    
+        var popup_40710cd5713aa6bd57c4efcaea7939f6 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_a822cdbe2d3a9a339529b45883e1471a = $(`<div id="html_a822cdbe2d3a9a339529b45883e1471a" style="width: 100.0%; height: 100.0%;">             <b>Rank #4</b><br>             <b>Pune</b><br>             State: MAHARASHTRA<br>             Growth Score: 77.06<br>             Internet HH: 235,018<br>             Electric HH: 1,925,019         </div>`)[0];
+                popup_40710cd5713aa6bd57c4efcaea7939f6.setContent(html_a822cdbe2d3a9a339529b45883e1471a);
+            
+        
+
+        circle_marker_ad8c69eb88377e22b09284baf4945bf6.bindPopup(popup_40710cd5713aa6bd57c4efcaea7939f6)
+        ;
+
+        
+    
+    
+            circle_marker_ad8c69eb88377e22b09284baf4945bf6.bindTooltip(
+                `<div>
+                     #4 Pune — Score: 77.06
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_fe5ba0fcf4ca8044776bfd9ddfc61f40 = L.circleMarker(
+                [18.353912387561707, 75.40265025028896],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0389070f499ddf5e437106ba13db3a4d);
+        
+    
+        var popup_e81ac655b440f5d4bc7f5f0f624f642e = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_31732734fbb60fc9cdaf525ebb1236e4 = $(`<div id="html_31732734fbb60fc9cdaf525ebb1236e4" style="width: 100.0%; height: 100.0%;">             <b>Rank #5</b><br>             <b>Mumbai</b><br>             State: MAHARASHTRA<br>             Growth Score: 54.44<br>             Internet HH: 121,344<br>             Electric HH: 625,927         </div>`)[0];
+                popup_e81ac655b440f5d4bc7f5f0f624f642e.setContent(html_31732734fbb60fc9cdaf525ebb1236e4);
+            
+        
+
+        circle_marker_fe5ba0fcf4ca8044776bfd9ddfc61f40.bindPopup(popup_e81ac655b440f5d4bc7f5f0f624f642e)
+        ;
+
+        
+    
+    
+            circle_marker_fe5ba0fcf4ca8044776bfd9ddfc61f40.bindTooltip(
+                `<div>
+                     #5 Mumbai — Score: 54.44
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6eb7bf4f3221c38d7ccb7191d39e9e66 = L.circleMarker(
+                [24.131884343967062, 87.79465612273582],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0389070f499ddf5e437106ba13db3a4d);
+        
+    
+        var popup_19d1c43e9c10a780e4b0787f0075250c = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_d2ef34bba20af906ad81c5638d676ba0 = $(`<div id="html_d2ef34bba20af906ad81c5638d676ba0" style="width: 100.0%; height: 100.0%;">             <b>Rank #6</b><br>             <b>North Twenty Four Parganas</b><br>             State: WEST BENGAL<br>             Growth Score: 51.26<br>             Internet HH: 105,185<br>             Electric HH: 1,608,749         </div>`)[0];
+                popup_19d1c43e9c10a780e4b0787f0075250c.setContent(html_d2ef34bba20af906ad81c5638d676ba0);
+            
+        
+
+        circle_marker_6eb7bf4f3221c38d7ccb7191d39e9e66.bindPopup(popup_19d1c43e9c10a780e4b0787f0075250c)
+        ;
+
+        
+    
+    
+            circle_marker_6eb7bf4f3221c38d7ccb7191d39e9e66.bindTooltip(
+                `<div>
+                     #6 North Twenty Four Parganas — Score: 51.26
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ec77f45c31d8eb20986b57b997b1b7c3 = L.circleMarker(
+                [22.44866565495917, 70.29471352247718],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0389070f499ddf5e437106ba13db3a4d);
+        
+    
+        var popup_2b5c00c23004f4b84b04a1b2e8613146 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_b5c10a5b67720fa950b0857b5ad4fcea = $(`<div id="html_b5c10a5b67720fa950b0857b5ad4fcea" style="width: 100.0%; height: 100.0%;">             <b>Rank #7</b><br>             <b>Ahmadabad</b><br>             State: GUJARAT<br>             Growth Score: 50.76<br>             Internet HH: 126,341<br>             Electric HH: 1,456,046         </div>`)[0];
+                popup_2b5c00c23004f4b84b04a1b2e8613146.setContent(html_b5c10a5b67720fa950b0857b5ad4fcea);
+            
+        
+
+        circle_marker_ec77f45c31d8eb20986b57b997b1b7c3.bindPopup(popup_2b5c00c23004f4b84b04a1b2e8613146)
+        ;
+
+        
+    
+    
+            circle_marker_ec77f45c31d8eb20986b57b997b1b7c3.bindTooltip(
+                `<div>
+                     #7 Ahmadabad — Score: 50.76
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4e41211e8e67005210d90d1ff6163659 = L.circleMarker(
+                [11.124439635376467, 79.43226525313604],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0389070f499ddf5e437106ba13db3a4d);
+        
+    
+        var popup_4978c739924df9fc7da0987a72286df5 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_1de28e1a353663885074d15a6e5d750a = $(`<div id="html_1de28e1a353663885074d15a6e5d750a" style="width: 100.0%; height: 100.0%;">             <b>Rank #8</b><br>             <b>Chennai</b><br>             State: TAMIL NADU<br>             Growth Score: 49.9<br>             Internet HH: 217,368<br>             Electric HH: 1,096,334         </div>`)[0];
+                popup_4978c739924df9fc7da0987a72286df5.setContent(html_1de28e1a353663885074d15a6e5d750a);
+            
+        
+
+        circle_marker_4e41211e8e67005210d90d1ff6163659.bindPopup(popup_4978c739924df9fc7da0987a72286df5)
+        ;
+
+        
+    
+    
+            circle_marker_4e41211e8e67005210d90d1ff6163659.bindTooltip(
+                `<div>
+                     #8 Chennai — Score: 49.9
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c7d855ccb04d3a42ca86fbca0a90d16f = L.circleMarker(
+                [15.92287225667939, 80.8152706450018],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0389070f499ddf5e437106ba13db3a4d);
+        
+    
+        var popup_89a99fc4d6cef840d4a410e6e2157b80 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_5f1f137e7337722caa275f44f077c61b = $(`<div id="html_5f1f137e7337722caa275f44f077c61b" style="width: 100.0%; height: 100.0%;">             <b>Rank #9</b><br>             <b>Rangareddy</b><br>             State: ANDHRA PRADESH<br>             Growth Score: 41.72<br>             Internet HH: 142,879<br>             Electric HH: 1,211,352         </div>`)[0];
+                popup_89a99fc4d6cef840d4a410e6e2157b80.setContent(html_5f1f137e7337722caa275f44f077c61b);
+            
+        
+
+        circle_marker_c7d855ccb04d3a42ca86fbca0a90d16f.bindPopup(popup_89a99fc4d6cef840d4a410e6e2157b80)
+        ;
+
+        
+    
+    
+            circle_marker_c7d855ccb04d3a42ca86fbca0a90d16f.bindTooltip(
+                `<div>
+                     #9 Rangareddy — Score: 41.72
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a25118d39a3293872c8b4f388fcfaf6c = L.circleMarker(
+                [22.332722769901867, 86.8009006702676],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0389070f499ddf5e437106ba13db3a4d);
+        
+    
+        var popup_c3536d2c4636cd89b9ee153941385a53 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_043940eaa79f40a576912da006f68add = $(`<div id="html_043940eaa79f40a576912da006f68add" style="width: 100.0%; height: 100.0%;">             <b>Rank #10</b><br>             <b>Kolkata</b><br>             State: WEST BENGAL<br>             Growth Score: 39.11<br>             Internet HH: 136,618<br>             Electric HH: 927,602         </div>`)[0];
+                popup_c3536d2c4636cd89b9ee153941385a53.setContent(html_043940eaa79f40a576912da006f68add);
+            
+        
+
+        circle_marker_a25118d39a3293872c8b4f388fcfaf6c.bindPopup(popup_c3536d2c4636cd89b9ee153941385a53)
+        ;
+
+        
+    
+    
+            circle_marker_a25118d39a3293872c8b4f388fcfaf6c.bindTooltip(
+                `<div>
+                     #10 Kolkata — Score: 39.11
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7f44129cecd8883aa3543257574a6cdd = L.circleMarker(
+                [21.61446612869518, 71.60494620563186],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0389070f499ddf5e437106ba13db3a4d);
+        
+    
+        var popup_6305ea6c65d115d3a3426de3c53160bb = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_e08d982ca26055b554490f04eaa6ca32 = $(`<div id="html_e08d982ca26055b554490f04eaa6ca32" style="width: 100.0%; height: 100.0%;">             <b>Rank #11</b><br>             <b>Surat</b><br>             State: GUJARAT<br>             Growth Score: 37.25<br>             Internet HH: 55,694<br>             Electric HH: 1,252,452         </div>`)[0];
+                popup_6305ea6c65d115d3a3426de3c53160bb.setContent(html_e08d982ca26055b554490f04eaa6ca32);
+            
+        
+
+        circle_marker_7f44129cecd8883aa3543257574a6cdd.bindPopup(popup_6305ea6c65d115d3a3426de3c53160bb)
+        ;
+
+        
+    
+    
+            circle_marker_7f44129cecd8883aa3543257574a6cdd.bindTooltip(
+                `<div>
+                     #11 Surat — Score: 37.25
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_82faa9623d8800e385a6f2c76d5e7cdf = L.circleMarker(
+                [17.444106942471898, 80.89316521890052],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0389070f499ddf5e437106ba13db3a4d);
+        
+    
+        var popup_87efbdce11655976f24172054af4d9e1 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_3c8a7ba7bd4a1d500027521443d9a445 = $(`<div id="html_3c8a7ba7bd4a1d500027521443d9a445" style="width: 100.0%; height: 100.0%;">             <b>Rank #12</b><br>             <b>Hyderabad</b><br>             State: ANDHRA PRADESH<br>             Growth Score: 36.49<br>             Internet HH: 149,034<br>             Electric HH: 869,721         </div>`)[0];
+                popup_87efbdce11655976f24172054af4d9e1.setContent(html_3c8a7ba7bd4a1d500027521443d9a445);
+            
+        
+
+        circle_marker_82faa9623d8800e385a6f2c76d5e7cdf.bindPopup(popup_87efbdce11655976f24172054af4d9e1)
+        ;
+
+        
+    
+    
+            circle_marker_82faa9623d8800e385a6f2c76d5e7cdf.bindTooltip(
+                `<div>
+                     #12 Hyderabad — Score: 36.49
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_285319cfe4112c4aef5145b23d5241bc = L.circleMarker(
+                [25.510325163018695, 74.04896960213212],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0389070f499ddf5e437106ba13db3a4d);
+        
+    
+        var popup_97d3501d8df0b5ee82b126f8a5d56c83 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_2808426b38cfd52d965251acf6450dcf = $(`<div id="html_2808426b38cfd52d965251acf6450dcf" style="width: 100.0%; height: 100.0%;">             <b>Rank #13</b><br>             <b>Jaipur</b><br>             State: RAJASTHAN<br>             Growth Score: 35.05<br>             Internet HH: 76,565<br>             Electric HH: 990,085         </div>`)[0];
+                popup_97d3501d8df0b5ee82b126f8a5d56c83.setContent(html_2808426b38cfd52d965251acf6450dcf);
+            
+        
+
+        circle_marker_285319cfe4112c4aef5145b23d5241bc.bindPopup(popup_97d3501d8df0b5ee82b126f8a5d56c83)
+        ;
+
+        
+    
+    
+            circle_marker_285319cfe4112c4aef5145b23d5241bc.bindTooltip(
+                `<div>
+                     #13 Jaipur — Score: 35.05
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_019a62109f7c9fb61d35f99c53c4583d = L.circleMarker(
+                [20.029880476439512, 77.40485631371462],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0389070f499ddf5e437106ba13db3a4d);
+        
+    
+        var popup_3e308ad7e87310c4fddff738fb24db1d = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_c4f7fbe43350e77b923952253fc52d8b = $(`<div id="html_c4f7fbe43350e77b923952253fc52d8b" style="width: 100.0%; height: 100.0%;">             <b>Rank #14</b><br>             <b>Nagpur</b><br>             State: MAHARASHTRA<br>             Growth Score: 31.84<br>             Internet HH: 57,964<br>             Electric HH: 917,626         </div>`)[0];
+                popup_3e308ad7e87310c4fddff738fb24db1d.setContent(html_c4f7fbe43350e77b923952253fc52d8b);
+            
+        
+
+        circle_marker_019a62109f7c9fb61d35f99c53c4583d.bindPopup(popup_3e308ad7e87310c4fddff738fb24db1d)
+        ;
+
+        
+    
+    
+            circle_marker_019a62109f7c9fb61d35f99c53c4583d.bindTooltip(
+                `<div>
+                     #14 Nagpur — Score: 31.84
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ed2b36c87fa53d40b49f468d59cbb969 = L.circleMarker(
+                [10.38326801454751, 78.16257465565654],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0389070f499ddf5e437106ba13db3a4d);
+        
+    
+        var popup_b088e8a93dafc6e45e6be7b833c5721f = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_3bab1f809d46bffbf4f243cf873ca16b = $(`<div id="html_3bab1f809d46bffbf4f243cf873ca16b" style="width: 100.0%; height: 100.0%;">             <b>Rank #15</b><br>             <b>Kancheepuram</b><br>             State: TAMIL NADU<br>             Growth Score: 31.59<br>             Internet HH: 100,322<br>             Electric HH: 961,161         </div>`)[0];
+                popup_b088e8a93dafc6e45e6be7b833c5721f.setContent(html_3bab1f809d46bffbf4f243cf873ca16b);
+            
+        
+
+        circle_marker_ed2b36c87fa53d40b49f468d59cbb969.bindPopup(popup_b088e8a93dafc6e45e6be7b833c5721f)
+        ;
+
+        
+    
+    
+            circle_marker_ed2b36c87fa53d40b49f468d59cbb969.bindTooltip(
+                `<div>
+                     #15 Kancheepuram — Score: 31.59
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3e607536335a3ba905390c187a02cc47 = L.circleMarker(
+                [12.485221987926904, 77.7178845587135],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0389070f499ddf5e437106ba13db3a4d);
+        
+    
+        var popup_0f741df9168fb7866a277b37784af8b0 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_81fcf51f709ac73bbfd589b1814a8d1b = $(`<div id="html_81fcf51f709ac73bbfd589b1814a8d1b" style="width: 100.0%; height: 100.0%;">             <b>Rank #16</b><br>             <b>Coimbatore</b><br>             State: TAMIL NADU<br>             Growth Score: 30.64<br>             Internet HH: 63,273<br>             Electric HH: 896,325         </div>`)[0];
+                popup_0f741df9168fb7866a277b37784af8b0.setContent(html_81fcf51f709ac73bbfd589b1814a8d1b);
+            
+        
+
+        circle_marker_3e607536335a3ba905390c187a02cc47.bindPopup(popup_0f741df9168fb7866a277b37784af8b0)
+        ;
+
+        
+    
+    
+            circle_marker_3e607536335a3ba905390c187a02cc47.bindTooltip(
+                `<div>
+                     #16 Coimbatore — Score: 30.64
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7bd5aa6f9e01476e6ac3043d2ba2f4b3 = L.circleMarker(
+                [19.302946767909326, 76.12243979135187],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0389070f499ddf5e437106ba13db3a4d);
+        
+    
+        var popup_3c5bd979d342150677db7b6515d69288 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_cf5584492d3e7d8a7edbc0eb4e2eca67 = $(`<div id="html_cf5584492d3e7d8a7edbc0eb4e2eca67" style="width: 100.0%; height: 100.0%;">             <b>Rank #17</b><br>             <b>Nashik</b><br>             State: MAHARASHTRA<br>             Growth Score: 29.5<br>             Internet HH: 45,039<br>             Electric HH: 904,710         </div>`)[0];
+                popup_3c5bd979d342150677db7b6515d69288.setContent(html_cf5584492d3e7d8a7edbc0eb4e2eca67);
+            
+        
+
+        circle_marker_7bd5aa6f9e01476e6ac3043d2ba2f4b3.bindPopup(popup_3c5bd979d342150677db7b6515d69288)
+        ;
+
+        
+    
+    
+            circle_marker_7bd5aa6f9e01476e6ac3043d2ba2f4b3.bindTooltip(
+                `<div>
+                     #17 Nashik — Score: 29.5
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_408b69eee6e2fa5f858ab95967e4c251 = L.circleMarker(
+                [29.050385450937014, 77.89540872537222],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0389070f499ddf5e437106ba13db3a4d);
+        
+    
+        var popup_4096a21c6d49d96ae13fcb3ee724a623 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_94241ff7fd4f74d2d50abb9274649058 = $(`<div id="html_94241ff7fd4f74d2d50abb9274649058" style="width: 100.0%; height: 100.0%;">             <b>Rank #18</b><br>             <b>North West</b><br>             State: NCT OF DELHI<br>             Growth Score: 29.15<br>             Internet HH: 114,044<br>             Electric HH: 720,900         </div>`)[0];
+                popup_4096a21c6d49d96ae13fcb3ee724a623.setContent(html_94241ff7fd4f74d2d50abb9274649058);
+            
+        
+
+        circle_marker_408b69eee6e2fa5f858ab95967e4c251.bindPopup(popup_4096a21c6d49d96ae13fcb3ee724a623)
+        ;
+
+        
+    
+    
+            circle_marker_408b69eee6e2fa5f858ab95967e4c251.bindTooltip(
+                `<div>
+                     #18 North West — Score: 29.15
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_55878455518eb27cf0409b40947d3099 = L.circleMarker(
+                [22.99569071845928, 87.3401924783827],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0389070f499ddf5e437106ba13db3a4d);
+        
+    
+        var popup_a25796af7e5d16e0cdfa06476375ecc6 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_9883243b72765baecf859abbefd56379 = $(`<div id="html_9883243b72765baecf859abbefd56379" style="width: 100.0%; height: 100.0%;">             <b>Rank #19</b><br>             <b>Barddhaman</b><br>             State: WEST BENGAL<br>             Growth Score: 28.81<br>             Internet HH: 32,323<br>             Electric HH: 1,049,943         </div>`)[0];
+                popup_a25796af7e5d16e0cdfa06476375ecc6.setContent(html_9883243b72765baecf859abbefd56379);
+            
+        
+
+        circle_marker_55878455518eb27cf0409b40947d3099.bindPopup(popup_a25796af7e5d16e0cdfa06476375ecc6)
+        ;
+
+        
+    
+    
+            circle_marker_55878455518eb27cf0409b40947d3099.bindTooltip(
+                `<div>
+                     #19 Barddhaman — Score: 28.81
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9a5127ebdb5fce6d8b16ce26e27e7816 = L.circleMarker(
+                [12.44713295144126, 77.0817215632293],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0389070f499ddf5e437106ba13db3a4d);
+        
+    
+        var popup_18f5ccf349fb99e68642bd43fddb74a8 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_2ff6e5dece5acfce573fd9e015914ff6 = $(`<div id="html_2ff6e5dece5acfce573fd9e015914ff6" style="width: 100.0%; height: 100.0%;">             <b>Rank #20</b><br>             <b>Thiruvallur</b><br>             State: TAMIL NADU<br>             Growth Score: 28.53<br>             Internet HH: 75,634<br>             Electric HH: 909,400         </div>`)[0];
+                popup_18f5ccf349fb99e68642bd43fddb74a8.setContent(html_2ff6e5dece5acfce573fd9e015914ff6);
+            
+        
+
+        circle_marker_9a5127ebdb5fce6d8b16ce26e27e7816.bindPopup(popup_18f5ccf349fb99e68642bd43fddb74a8)
+        ;
+
+        
+    
+    
+            circle_marker_9a5127ebdb5fce6d8b16ce26e27e7816.bindTooltip(
+                `<div>
+                     #20 Thiruvallur — Score: 28.53
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4194b61080d5f7861149a68c33136f49 = L.circleMarker(
+                [9.159800488388296, 76.89473161035299],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0389070f499ddf5e437106ba13db3a4d);
+        
+    
+        var popup_05ccff750ab0dff88b5fc7f34b86daa3 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_4771242995a9e9b967de23cce6f866e6 = $(`<div id="html_4771242995a9e9b967de23cce6f866e6" style="width: 100.0%; height: 100.0%;">             <b>Rank #21</b><br>             <b>Ernakulam</b><br>             State: KERALA<br>             Growth Score: 26.13<br>             Internet HH: 88,737<br>             Electric HH: 771,287         </div>`)[0];
+                popup_05ccff750ab0dff88b5fc7f34b86daa3.setContent(html_4771242995a9e9b967de23cce6f866e6);
+            
+        
+
+        circle_marker_4194b61080d5f7861149a68c33136f49.bindPopup(popup_05ccff750ab0dff88b5fc7f34b86daa3)
+        ;
+
+        
+    
+    
+            circle_marker_4194b61080d5f7861149a68c33136f49.bindTooltip(
+                `<div>
+                     #21 Ernakulam — Score: 26.13
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d7a52f8d815ae69a054c51c473336c58 = L.circleMarker(
+                [28.048114712034213, 78.56366372889298],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0389070f499ddf5e437106ba13db3a4d);
+        
+    
+        var popup_510fcb4e97d965e632535abb39dfe382 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_00f6f0385842a35b6ae9923ae3f2f89a = $(`<div id="html_00f6f0385842a35b6ae9923ae3f2f89a" style="width: 100.0%; height: 100.0%;">             <b>Rank #22</b><br>             <b>Lucknow</b><br>             State: UTTAR PRADESH<br>             Growth Score: 25.9<br>             Internet HH: 68,506<br>             Electric HH: 582,769         </div>`)[0];
+                popup_510fcb4e97d965e632535abb39dfe382.setContent(html_00f6f0385842a35b6ae9923ae3f2f89a);
+            
+        
+
+        circle_marker_d7a52f8d815ae69a054c51c473336c58.bindPopup(popup_510fcb4e97d965e632535abb39dfe382)
+        ;
+
+        
+    
+    
+            circle_marker_d7a52f8d815ae69a054c51c473336c58.bindTooltip(
+                `<div>
+                     #22 Lucknow — Score: 25.9
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c1606f9fbff5f8d7cc87df46f2ac43fd = L.circleMarker(
+                [28.32106450730395, 80.8541518503279],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0389070f499ddf5e437106ba13db3a4d);
+        
+    
+        var popup_20921fd419f8e029960ad4d9d10a2b5c = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_1b6effe708f2d480dc0c3d1279f3983a = $(`<div id="html_1b6effe708f2d480dc0c3d1279f3983a" style="width: 100.0%; height: 100.0%;">             <b>Rank #23</b><br>             <b>Ghaziabad</b><br>             State: UTTAR PRADESH<br>             Growth Score: 25.5<br>             Internet HH: 78,116<br>             Electric HH: 695,130         </div>`)[0];
+                popup_20921fd419f8e029960ad4d9d10a2b5c.setContent(html_1b6effe708f2d480dc0c3d1279f3983a);
+            
+        
+
+        circle_marker_c1606f9fbff5f8d7cc87df46f2ac43fd.bindPopup(popup_20921fd419f8e029960ad4d9d10a2b5c)
+        ;
+
+        
+    
+    
+            circle_marker_c1606f9fbff5f8d7cc87df46f2ac43fd.bindTooltip(
+                `<div>
+                     #23 Ghaziabad — Score: 25.5
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_184ab792252ab8323ffe56a7ce9f71ee = L.circleMarker(
+                [29.467095454898107, 77.9077200892073],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0389070f499ddf5e437106ba13db3a4d);
+        
+    
+        var popup_246147bc1d17b37f9890ab06d25a2ee3 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_82c13e075bd792d36725fcf4f7783630 = $(`<div id="html_82c13e075bd792d36725fcf4f7783630" style="width: 100.0%; height: 100.0%;">             <b>Rank #24</b><br>             <b>South</b><br>             State: NCT OF DELHI<br>             Growth Score: 24.85<br>             Internet HH: 111,453<br>             Electric HH: 549,402         </div>`)[0];
+                popup_246147bc1d17b37f9890ab06d25a2ee3.setContent(html_82c13e075bd792d36725fcf4f7783630);
+            
+        
+
+        circle_marker_184ab792252ab8323ffe56a7ce9f71ee.bindPopup(popup_246147bc1d17b37f9890ab06d25a2ee3)
+        ;
+
+        
+    
+    
+            circle_marker_184ab792252ab8323ffe56a7ce9f71ee.bindTooltip(
+                `<div>
+                     #24 South — Score: 24.85
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6446e8d22a0bee4f3ee0ed7a13c79f37 = L.circleMarker(
+                [32.06030559682783, 74.54713526270537],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0389070f499ddf5e437106ba13db3a4d);
+        
+    
+        var popup_f93968f997cbda867fa1f4143296a4aa = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_d5463fdbf2c42eb15554fc546bdf0b47 = $(`<div id="html_d5463fdbf2c42eb15554fc546bdf0b47" style="width: 100.0%; height: 100.0%;">             <b>Rank #25</b><br>             <b>Ludhiana</b><br>             State: PUNJAB<br>             Growth Score: 24.74<br>             Internet HH: 58,589<br>             Electric HH: 703,624         </div>`)[0];
+                popup_f93968f997cbda867fa1f4143296a4aa.setContent(html_d5463fdbf2c42eb15554fc546bdf0b47);
+            
+        
+
+        circle_marker_6446e8d22a0bee4f3ee0ed7a13c79f37.bindPopup(popup_f93968f997cbda867fa1f4143296a4aa)
+        ;
+
+        
+    
+    
+            circle_marker_6446e8d22a0bee4f3ee0ed7a13c79f37.bindTooltip(
+                `<div>
+                     #25 Ludhiana — Score: 24.74
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9c97fa0aa6fb5d38be57b3321350e261 = L.circleMarker(
+                [17.133357097926986, 79.40699328344444],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0389070f499ddf5e437106ba13db3a4d);
+        
+    
+        var popup_cf965234ec9a7db5487136fd6e2f2c68 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_d7d3a29eef28eb76c34f3b25260a0fcd = $(`<div id="html_d7d3a29eef28eb76c34f3b25260a0fcd" style="width: 100.0%; height: 100.0%;">             <b>Rank #26</b><br>             <b>Krishna</b><br>             State: ANDHRA PRADESH<br>             Growth Score: 24.43<br>             Internet HH: 30,438<br>             Electric HH: 1,163,932         </div>`)[0];
+                popup_cf965234ec9a7db5487136fd6e2f2c68.setContent(html_d7d3a29eef28eb76c34f3b25260a0fcd);
+            
+        
+
+        circle_marker_9c97fa0aa6fb5d38be57b3321350e261.bindPopup(popup_cf965234ec9a7db5487136fd6e2f2c68)
+        ;
+
+        
+    
+    
+            circle_marker_9c97fa0aa6fb5d38be57b3321350e261.bindTooltip(
+                `<div>
+                     #26 Krishna — Score: 24.43
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e44b3538dc0325b632c37f84d7d0ab66 = L.circleMarker(
+                [17.446040488072065, 80.7986420533587],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0389070f499ddf5e437106ba13db3a4d);
+        
+    
+        var popup_ab564d91fc039cc347ebf4ed8b74fe86 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_4ca562f7a6da9559fec4feb443f7f3a3 = $(`<div id="html_4ca562f7a6da9559fec4feb443f7f3a3" style="width: 100.0%; height: 100.0%;">             <b>Rank #27</b><br>             <b>Visakhapatnam</b><br>             State: ANDHRA PRADESH<br>             Growth Score: 24.03<br>             Internet HH: 45,492<br>             Electric HH: 1,010,250         </div>`)[0];
+                popup_ab564d91fc039cc347ebf4ed8b74fe86.setContent(html_4ca562f7a6da9559fec4feb443f7f3a3);
+            
+        
+
+        circle_marker_e44b3538dc0325b632c37f84d7d0ab66.bindPopup(popup_ab564d91fc039cc347ebf4ed8b74fe86)
+        ;
+
+        
+    
+    
+            circle_marker_e44b3538dc0325b632c37f84d7d0ab66.bindTooltip(
+                `<div>
+                     #27 Visakhapatnam — Score: 24.03
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7a8c7e4b32b580e32e939fabddba509b = L.circleMarker(
+                [21.748048404801466, 87.09470147895921],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0389070f499ddf5e437106ba13db3a4d);
+        
+    
+        var popup_a8d066d56b98511a8496fd6b5a1d6544 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_c2d610ccedc063939309a262e3763f33 = $(`<div id="html_c2d610ccedc063939309a262e3763f33" style="width: 100.0%; height: 100.0%;">             <b>Rank #28</b><br>             <b>Hugli</b><br>             State: WEST BENGAL<br>             Growth Score: 24.02<br>             Internet HH: 31,725<br>             Electric HH: 965,258         </div>`)[0];
+                popup_a8d066d56b98511a8496fd6b5a1d6544.setContent(html_c2d610ccedc063939309a262e3763f33);
+            
+        
+
+        circle_marker_7a8c7e4b32b580e32e939fabddba509b.bindPopup(popup_a8d066d56b98511a8496fd6b5a1d6544)
+        ;
+
+        
+    
+    
+            circle_marker_7a8c7e4b32b580e32e939fabddba509b.bindTooltip(
+                `<div>
+                     #28 Hugli — Score: 24.02
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8b9d7237dc43d486e8c55f7e35011d4f = L.circleMarker(
+                [29.33533162773513, 76.0075366076747],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0389070f499ddf5e437106ba13db3a4d);
+        
+    
+        var popup_ab87a0df00499b6114fddb0f670d670c = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_3a8c7cc45cdac8e27e2a5afda767f812 = $(`<div id="html_3a8c7cc45cdac8e27e2a5afda767f812" style="width: 100.0%; height: 100.0%;">             <b>Rank #29</b><br>             <b>West</b><br>             State: NCT OF DELHI<br>             Growth Score: 23.84<br>             Internet HH: 109,666<br>             Electric HH: 520,282         </div>`)[0];
+                popup_ab87a0df00499b6114fddb0f670d670c.setContent(html_3a8c7cc45cdac8e27e2a5afda767f812);
+            
+        
+
+        circle_marker_8b9d7237dc43d486e8c55f7e35011d4f.bindPopup(popup_ab87a0df00499b6114fddb0f670d670c)
+        ;
+
+        
+    
+    
+            circle_marker_8b9d7237dc43d486e8c55f7e35011d4f.bindTooltip(
+                `<div>
+                     #29 West — Score: 23.84
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e21eaf8d1ab274419ec0a9f797d1a7a1 = L.circleMarker(
+                [30.773397709587375, 75.50035623737548],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0389070f499ddf5e437106ba13db3a4d);
+        
+    
+        var popup_3395337e2d466f9f0efc661a3762a097 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_d7ee0439d548ad0813f9923fcab9d8e4 = $(`<div id="html_d7ee0439d548ad0813f9923fcab9d8e4" style="width: 100.0%; height: 100.0%;">             <b>Rank #30</b><br>             <b>Chandigarh</b><br>             State: CHANDIGARH<br>             Growth Score: 23.71<br>             Internet HH: 44,283<br>             Electric HH: 231,204         </div>`)[0];
+                popup_3395337e2d466f9f0efc661a3762a097.setContent(html_d7ee0439d548ad0813f9923fcab9d8e4);
+            
+        
+
+        circle_marker_e21eaf8d1ab274419ec0a9f797d1a7a1.bindPopup(popup_3395337e2d466f9f0efc661a3762a097)
+        ;
+
+        
+    
+    
+            circle_marker_e21eaf8d1ab274419ec0a9f797d1a7a1.bindTooltip(
+                `<div>
+                     #30 Chandigarh — Score: 23.71
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6b4f25c13111972ca63ef1cd6502aba2 = L.circleMarker(
+                [21.489772284792924, 69.55123235378687],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0389070f499ddf5e437106ba13db3a4d);
+        
+    
+        var popup_40ad272cd2fad6ed6307374ac32123e0 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_034fe46c88096c81541c9202b6d9e73d = $(`<div id="html_034fe46c88096c81541c9202b6d9e73d" style="width: 100.0%; height: 100.0%;">             <b>Rank #31</b><br>             <b>Vadodara</b><br>             State: GUJARAT<br>             Growth Score: 23.67<br>             Internet HH: 53,606<br>             Electric HH: 798,277         </div>`)[0];
+                popup_40ad272cd2fad6ed6307374ac32123e0.setContent(html_034fe46c88096c81541c9202b6d9e73d);
+            
+        
+
+        circle_marker_6b4f25c13111972ca63ef1cd6502aba2.bindPopup(popup_40ad272cd2fad6ed6307374ac32123e0)
+        ;
+
+        
+    
+    
+            circle_marker_6b4f25c13111972ca63ef1cd6502aba2.bindTooltip(
+                `<div>
+                     #31 Vadodara — Score: 23.67
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c90ef46e6a3286fc0451de988db6efd3 = L.circleMarker(
+                [17.062938449405095, 80.33173645670348],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0389070f499ddf5e437106ba13db3a4d);
+        
+    
+        var popup_bfb393c53ef101b6a38fa14bb9c9cbc5 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_2af1acb56cdf77b9bfc29158558d88a2 = $(`<div id="html_2af1acb56cdf77b9bfc29158558d88a2" style="width: 100.0%; height: 100.0%;">             <b>Rank #32</b><br>             <b>East Godavari</b><br>             State: ANDHRA PRADESH<br>             Growth Score: 23.19<br>             Internet HH: 22,411<br>             Electric HH: 1,297,273         </div>`)[0];
+                popup_bfb393c53ef101b6a38fa14bb9c9cbc5.setContent(html_2af1acb56cdf77b9bfc29158558d88a2);
+            
+        
+
+        circle_marker_c90ef46e6a3286fc0451de988db6efd3.bindPopup(popup_bfb393c53ef101b6a38fa14bb9c9cbc5)
+        ;
+
+        
+    
+    
+            circle_marker_c90ef46e6a3286fc0451de988db6efd3.bindTooltip(
+                `<div>
+                     #32 East Godavari — Score: 23.19
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_679fe61c068d4d0cb164c716b5600bb1 = L.circleMarker(
+                [11.346891292851414, 75.76859489186212],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0389070f499ddf5e437106ba13db3a4d);
+        
+    
+        var popup_b7a088e2fad4034450fbdeae61de39f8 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_9d126604bce3f81c75c8dfb5ea59f577 = $(`<div id="html_9d126604bce3f81c75c8dfb5ea59f577" style="width: 100.0%; height: 100.0%;">             <b>Rank #33</b><br>             <b>Thiruvananthapuram</b><br>             State: KERALA<br>             Growth Score: 23.02<br>             Internet HH: 71,621<br>             Electric HH: 783,872         </div>`)[0];
+                popup_b7a088e2fad4034450fbdeae61de39f8.setContent(html_9d126604bce3f81c75c8dfb5ea59f577);
+            
+        
+
+        circle_marker_679fe61c068d4d0cb164c716b5600bb1.bindPopup(popup_b7a088e2fad4034450fbdeae61de39f8)
+        ;
+
+        
+    
+    
+            circle_marker_679fe61c068d4d0cb164c716b5600bb1.bindTooltip(
+                `<div>
+                     #33 Thiruvananthapuram — Score: 23.02
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f484fbca04de3257054d9de4f8434aa5 = L.circleMarker(
+                [17.044604775872138, 79.60610207198779],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0389070f499ddf5e437106ba13db3a4d);
+        
+    
+        var popup_e60f9878b8837d7828aabf3cb5884488 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_817417626cf7f7b884b4ad85b93c9f7f = $(`<div id="html_817417626cf7f7b884b4ad85b93c9f7f" style="width: 100.0%; height: 100.0%;">             <b>Rank #34</b><br>             <b>Guntur</b><br>             State: ANDHRA PRADESH<br>             Growth Score: 22.84<br>             Internet HH: 19,383<br>             Electric HH: 1,186,028         </div>`)[0];
+                popup_e60f9878b8837d7828aabf3cb5884488.setContent(html_817417626cf7f7b884b4ad85b93c9f7f);
+            
+        
+
+        circle_marker_f484fbca04de3257054d9de4f8434aa5.bindPopup(popup_e60f9878b8837d7828aabf3cb5884488)
+        ;
+
+        
+    
+    
+            circle_marker_f484fbca04de3257054d9de4f8434aa5.bindTooltip(
+                `<div>
+                     #34 Guntur — Score: 22.84
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2d884c9b2c68098da949732d1bd3c4b6 = L.circleMarker(
+                [23.868694249193858, 87.12806846094274],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0389070f499ddf5e437106ba13db3a4d);
+        
+    
+        var popup_7e968ad97b8dfd6d194e3036598c8f82 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_3c4dcce94ea5a250d556618f4f603b8b = $(`<div id="html_3c4dcce94ea5a250d556618f4f603b8b" style="width: 100.0%; height: 100.0%;">             <b>Rank #35</b><br>             <b>South Twenty Four Parganas</b><br>             State: WEST BENGAL<br>             Growth Score: 22.51<br>             Internet HH: 20,665<br>             Electric HH: 837,874         </div>`)[0];
+                popup_7e968ad97b8dfd6d194e3036598c8f82.setContent(html_3c4dcce94ea5a250d556618f4f603b8b);
+            
+        
+
+        circle_marker_2d884c9b2c68098da949732d1bd3c4b6.bindPopup(popup_7e968ad97b8dfd6d194e3036598c8f82)
+        ;
+
+        
+    
+    
+            circle_marker_2d884c9b2c68098da949732d1bd3c4b6.bindTooltip(
+                `<div>
+                     #35 South Twenty Four Parganas — Score: 22.51
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b82669e71ae7ac020667218c6c25600c = L.circleMarker(
+                [24.656002463273268, 85.66034229788274],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0389070f499ddf5e437106ba13db3a4d);
+        
+    
+        var popup_c09f1e96c54977b43f367c3356535bb1 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_40465e2eac564924db18f82794884a4d = $(`<div id="html_40465e2eac564924db18f82794884a4d" style="width: 100.0%; height: 100.0%;">             <b>Rank #36</b><br>             <b>Patna</b><br>             State: BIHAR<br>             Growth Score: 21.82<br>             Internet HH: 40,692<br>             Electric HH: 546,859         </div>`)[0];
+                popup_c09f1e96c54977b43f367c3356535bb1.setContent(html_40465e2eac564924db18f82794884a4d);
+            
+        
+
+        circle_marker_b82669e71ae7ac020667218c6c25600c.bindPopup(popup_c09f1e96c54977b43f367c3356535bb1)
+        ;
+
+        
+    
+    
+            circle_marker_b82669e71ae7ac020667218c6c25600c.bindTooltip(
+                `<div>
+                     #36 Patna — Score: 21.82
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0b22ab8ac172020ebc0fe32cfc098e56 = L.circleMarker(
+                [25.89512058593203, 81.00426487655933],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0389070f499ddf5e437106ba13db3a4d);
+        
+    
+        var popup_683ddb36b1f4d1b2969ea5a1a349e621 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_d96519b3f944eff989b053fef4428e9c = $(`<div id="html_d96519b3f944eff989b053fef4428e9c" style="width: 100.0%; height: 100.0%;">             <b>Rank #37</b><br>             <b>Kanpur Nagar</b><br>             State: UTTAR PRADESH<br>             Growth Score: 21.63<br>             Internet HH: 33,966<br>             Electric HH: 517,271         </div>`)[0];
+                popup_683ddb36b1f4d1b2969ea5a1a349e621.setContent(html_d96519b3f944eff989b053fef4428e9c);
+            
+        
+
+        circle_marker_0b22ab8ac172020ebc0fe32cfc098e56.bindPopup(popup_683ddb36b1f4d1b2969ea5a1a349e621)
+        ;
+
+        
+    
+    
+            circle_marker_0b22ab8ac172020ebc0fe32cfc098e56.bindTooltip(
+                `<div>
+                     #37 Kanpur Nagar — Score: 21.63
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_44491a776bfc5927d57ce29dd5485a03 = L.circleMarker(
+                [27.909368209374446, 78.27786067417873],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0389070f499ddf5e437106ba13db3a4d);
+        
+    
+        var popup_818f34e5258503ae136721b2bc0cfec7 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_987f0973297522550f88c70b1fdf02c1 = $(`<div id="html_987f0973297522550f88c70b1fdf02c1" style="width: 100.0%; height: 100.0%;">             <b>Rank #38</b><br>             <b>South West</b><br>             State: NCT OF DELHI<br>             Growth Score: 21.6<br>             Internet HH: 94,853<br>             Electric HH: 457,784         </div>`)[0];
+                popup_818f34e5258503ae136721b2bc0cfec7.setContent(html_987f0973297522550f88c70b1fdf02c1);
+            
+        
+
+        circle_marker_44491a776bfc5927d57ce29dd5485a03.bindPopup(popup_818f34e5258503ae136721b2bc0cfec7)
+        ;
+
+        
+    
+    
+            circle_marker_44491a776bfc5927d57ce29dd5485a03.bindTooltip(
+                `<div>
+                     #38 South West — Score: 21.6
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_af8f6df3dd53c54144ab3681fa7fcad7 = L.circleMarker(
+                [22.777932124582442, 87.52755358695215],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0389070f499ddf5e437106ba13db3a4d);
+        
+    
+        var popup_0535a7fa856ee5f34e4e485971f0cabd = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_040410464ea968ddce9e90c1ac7cc2c6 = $(`<div id="html_040410464ea968ddce9e90c1ac7cc2c6" style="width: 100.0%; height: 100.0%;">             <b>Rank #39</b><br>             <b>Haora</b><br>             State: WEST BENGAL<br>             Growth Score: 21.31<br>             Internet HH: 30,751<br>             Electric HH: 796,953         </div>`)[0];
+                popup_0535a7fa856ee5f34e4e485971f0cabd.setContent(html_040410464ea968ddce9e90c1ac7cc2c6);
+            
+        
+
+        circle_marker_af8f6df3dd53c54144ab3681fa7fcad7.bindPopup(popup_0535a7fa856ee5f34e4e485971f0cabd)
+        ;
+
+        
+    
+    
+            circle_marker_af8f6df3dd53c54144ab3681fa7fcad7.bindTooltip(
+                `<div>
+                     #39 Haora — Score: 21.31
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_124e663d96c7ccf10d226d1c5118e1a1 = L.circleMarker(
+                [10.578137741326092, 78.83813383966894],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0389070f499ddf5e437106ba13db3a4d);
+        
+    
+        var popup_d197a324452e4e6c4b1fb734b19ab14f = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_cda8cbf7d6c3c76cd176683b944004b3 = $(`<div id="html_cda8cbf7d6c3c76cd176683b944004b3" style="width: 100.0%; height: 100.0%;">             <b>Rank #40</b><br>             <b>Vellore</b><br>             State: TAMIL NADU<br>             Growth Score: 21.26<br>             Internet HH: 20,623<br>             Electric HH: 865,913         </div>`)[0];
+                popup_d197a324452e4e6c4b1fb734b19ab14f.setContent(html_cda8cbf7d6c3c76cd176683b944004b3);
+            
+        
+
+        circle_marker_124e663d96c7ccf10d226d1c5118e1a1.bindPopup(popup_d197a324452e4e6c4b1fb734b19ab14f)
+        ;
+
+        
+    
+    
+            circle_marker_124e663d96c7ccf10d226d1c5118e1a1.bindTooltip(
+                `<div>
+                     #40 Vellore — Score: 21.26
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_06a707ab8887c24e27c15006ac066e43 = L.circleMarker(
+                [9.707819597230651, 77.30061070510294],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0389070f499ddf5e437106ba13db3a4d);
+        
+    
+        var popup_df5928a18f29257f582b62f16a0c17ae = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_46095a34c9a3c6531da2ab20bdb86386 = $(`<div id="html_46095a34c9a3c6531da2ab20bdb86386" style="width: 100.0%; height: 100.0%;">             <b>Rank #41</b><br>             <b>Salem</b><br>             State: TAMIL NADU<br>             Growth Score: 21.03<br>             Internet HH: 20,660<br>             Electric HH: 835,377         </div>`)[0];
+                popup_df5928a18f29257f582b62f16a0c17ae.setContent(html_46095a34c9a3c6531da2ab20bdb86386);
+            
+        
+
+        circle_marker_06a707ab8887c24e27c15006ac066e43.bindPopup(popup_df5928a18f29257f582b62f16a0c17ae)
+        ;
+
+        
+    
+    
+            circle_marker_06a707ab8887c24e27c15006ac066e43.bindTooltip(
+                `<div>
+                     #41 Salem — Score: 21.03
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ef960ae24c8dbcf2a42a6ab74b0ff878 = L.circleMarker(
+                [10.41574664533011, 77.60056093179504],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0389070f499ddf5e437106ba13db3a4d);
+        
+    
+        var popup_234a58cf38a4c63e1987e0d43ccc061b = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_cf57268f4443963063ceec0ee68936ba = $(`<div id="html_cf57268f4443963063ceec0ee68936ba" style="width: 100.0%; height: 100.0%;">             <b>Rank #42</b><br>             <b>Madurai</b><br>             State: TAMIL NADU<br>             Growth Score: 20.85<br>             Internet HH: 34,097<br>             Electric HH: 754,141         </div>`)[0];
+                popup_234a58cf38a4c63e1987e0d43ccc061b.setContent(html_cf57268f4443963063ceec0ee68936ba);
+            
+        
+
+        circle_marker_ef960ae24c8dbcf2a42a6ab74b0ff878.bindPopup(popup_234a58cf38a4c63e1987e0d43ccc061b)
+        ;
+
+        
+    
+    
+            circle_marker_ef960ae24c8dbcf2a42a6ab74b0ff878.bindTooltip(
+                `<div>
+                     #42 Madurai — Score: 20.85
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_14ce1bc0fa4324eea51fc6683314a07e = L.circleMarker(
+                [9.913809918199728, 75.88593591325738],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0389070f499ddf5e437106ba13db3a4d);
+        
+    
+        var popup_bbe0de49e2068ab066a94dd2499b1007 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_6654c94590243d29a064741ed5e84626 = $(`<div id="html_6654c94590243d29a064741ed5e84626" style="width: 100.0%; height: 100.0%;">             <b>Rank #43</b><br>             <b>Thrissur</b><br>             State: KERALA<br>             Growth Score: 20.7<br>             Internet HH: 56,148<br>             Electric HH: 721,625         </div>`)[0];
+                popup_bbe0de49e2068ab066a94dd2499b1007.setContent(html_6654c94590243d29a064741ed5e84626);
+            
+        
+
+        circle_marker_14ce1bc0fa4324eea51fc6683314a07e.bindPopup(popup_bbe0de49e2068ab066a94dd2499b1007)
+        ;
+
+        
+    
+    
+            circle_marker_14ce1bc0fa4324eea51fc6683314a07e.bindTooltip(
+                `<div>
+                     #43 Thrissur — Score: 20.7
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_42433609b4851a257098c823dd273cbf = L.circleMarker(
+                [19.341015221084138, 75.34442673902434],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0389070f499ddf5e437106ba13db3a4d);
+        
+    
+        var popup_3473c48bc134e9b941dd0f2b74d675c6 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_d7a9e6ebebe515d4ab5f3927ed4b4d5d = $(`<div id="html_d7a9e6ebebe515d4ab5f3927ed4b4d5d" style="width: 100.0%; height: 100.0%;">             <b>Rank #44</b><br>             <b>Kolhapur</b><br>             State: MAHARASHTRA<br>             Growth Score: 20.55<br>             Internet HH: 22,269<br>             Electric HH: 770,005         </div>`)[0];
+                popup_3473c48bc134e9b941dd0f2b74d675c6.setContent(html_d7a9e6ebebe515d4ab5f3927ed4b4d5d);
+            
+        
+
+        circle_marker_42433609b4851a257098c823dd273cbf.bindPopup(popup_3473c48bc134e9b941dd0f2b74d675c6)
+        ;
+
+        
+    
+    
+            circle_marker_42433609b4851a257098c823dd273cbf.bindTooltip(
+                `<div>
+                     #44 Kolhapur — Score: 20.55
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_214552ed8c537580c7819f07f93261d8 = L.circleMarker(
+                [23.478245584366206, 78.20385872320557],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0389070f499ddf5e437106ba13db3a4d);
+        
+    
+        var popup_913db5ca4964522eb6da29521fdc0e0f = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_6a5404865bd276a558b30e8d4e01afd1 = $(`<div id="html_6a5404865bd276a558b30e8d4e01afd1" style="width: 100.0%; height: 100.0%;">             <b>Rank #45</b><br>             <b>Indore</b><br>             State: MADHYA PRADESH<br>             Growth Score: 20.26<br>             Internet HH: 48,691<br>             Electric HH: 593,576         </div>`)[0];
+                popup_913db5ca4964522eb6da29521fdc0e0f.setContent(html_6a5404865bd276a558b30e8d4e01afd1);
+            
+        
+
+        circle_marker_214552ed8c537580c7819f07f93261d8.bindPopup(popup_913db5ca4964522eb6da29521fdc0e0f)
+        ;
+
+        
+    
+    
+            circle_marker_214552ed8c537580c7819f07f93261d8.bindTooltip(
+                `<div>
+                     #45 Indore — Score: 20.26
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c414949497e4fa290669f94769f26e0e = L.circleMarker(
+                [21.537601799967995, 70.92414910925284],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0389070f499ddf5e437106ba13db3a4d);
+        
+    
+        var popup_6573cc43df50126b5b2189c57881bd08 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_89074db0bdc4dcea8c0911fd84346d37 = $(`<div id="html_89074db0bdc4dcea8c0911fd84346d37" style="width: 100.0%; height: 100.0%;">             <b>Rank #46</b><br>             <b>Rajkot</b><br>             State: GUJARAT<br>             Growth Score: 20.25<br>             Internet HH: 21,785<br>             Electric HH: 747,352         </div>`)[0];
+                popup_6573cc43df50126b5b2189c57881bd08.setContent(html_89074db0bdc4dcea8c0911fd84346d37);
+            
+        
+
+        circle_marker_c414949497e4fa290669f94769f26e0e.bindPopup(popup_6573cc43df50126b5b2189c57881bd08)
+        ;
+
+        
+    
+    
+            circle_marker_c414949497e4fa290669f94769f26e0e.bindTooltip(
+                `<div>
+                     #46 Rajkot — Score: 20.25
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_bf73c669eb8dcd08c18b71a5c3971d8c = L.circleMarker(
+                [19.561738734338572, 76.99556331729866],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0389070f499ddf5e437106ba13db3a4d);
+        
+    
+        var popup_032c0456888aeecf12702822dda2e7dc = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_2f1e6b312c5b92ae399b5b2637cd241c = $(`<div id="html_2f1e6b312c5b92ae399b5b2637cd241c" style="width: 100.0%; height: 100.0%;">             <b>Rank #47</b><br>             <b>Ahmadnagar</b><br>             State: MAHARASHTRA<br>             Growth Score: 20.09<br>             Internet HH: 18,370<br>             Electric HH: 677,592         </div>`)[0];
+                popup_032c0456888aeecf12702822dda2e7dc.setContent(html_2f1e6b312c5b92ae399b5b2637cd241c);
+            
+        
+
+        circle_marker_bf73c669eb8dcd08c18b71a5c3971d8c.bindPopup(popup_032c0456888aeecf12702822dda2e7dc)
+        ;
+
+        
+    
+    
+            circle_marker_bf73c669eb8dcd08c18b71a5c3971d8c.bindTooltip(
+                `<div>
+                     #47 Ahmadnagar — Score: 20.09
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_73f5d2172910136c99c069d21a9ea88b = L.circleMarker(
+                [26.480141626830353, 79.23279594212941],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0389070f499ddf5e437106ba13db3a4d);
+        
+    
+        var popup_6aa4d4420259d10a73777373bcadc204 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_0c2a2d0d99fe18cdfa0dff5fced28c1a = $(`<div id="html_0c2a2d0d99fe18cdfa0dff5fced28c1a" style="width: 100.0%; height: 100.0%;">             <b>Rank #48</b><br>             <b>Allahabad</b><br>             State: UTTAR PRADESH<br>             Growth Score: 19.19<br>             Internet HH: 24,122<br>             Electric HH: 391,542         </div>`)[0];
+                popup_6aa4d4420259d10a73777373bcadc204.setContent(html_0c2a2d0d99fe18cdfa0dff5fced28c1a);
+            
+        
+
+        circle_marker_73f5d2172910136c99c069d21a9ea88b.bindPopup(popup_6aa4d4420259d10a73777373bcadc204)
+        ;
+
+        
+    
+    
+            circle_marker_73f5d2172910136c99c069d21a9ea88b.bindTooltip(
+                `<div>
+                     #48 Allahabad — Score: 19.19
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e2f5ce8083df4251cf4dde5dc80adb86 = L.circleMarker(
+                [10.041884061026272, 77.06458162643749],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0389070f499ddf5e437106ba13db3a4d);
+        
+    
+        var popup_72729585b596ceca952a009156e889ef = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_e7f5bba208033587b1ad0ef3fea02d9e = $(`<div id="html_e7f5bba208033587b1ad0ef3fea02d9e" style="width: 100.0%; height: 100.0%;">             <b>Rank #49</b><br>             <b>Tiruppur</b><br>             State: TAMIL NADU<br>             Growth Score: 19.11<br>             Internet HH: 17,181<br>             Electric HH: 655,073         </div>`)[0];
+                popup_72729585b596ceca952a009156e889ef.setContent(html_e7f5bba208033587b1ad0ef3fea02d9e);
+            
+        
+
+        circle_marker_e2f5ce8083df4251cf4dde5dc80adb86.bindPopup(popup_72729585b596ceca952a009156e889ef)
+        ;
+
+        
+    
+    
+            circle_marker_e2f5ce8083df4251cf4dde5dc80adb86.bindTooltip(
+                `<div>
+                     #49 Tiruppur — Score: 19.11
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_18854664e2c7c44ef80c75bbf065f799 = L.circleMarker(
+                [15.961098198223725, 80.26277551670799],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0389070f499ddf5e437106ba13db3a4d);
+        
+    
+        var popup_fca81567ce06b6833b4ddfda8ee72e36 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_fccc30595744493844f4316464745f05 = $(`<div id="html_fccc30595744493844f4316464745f05" style="width: 100.0%; height: 100.0%;">             <b>Rank #50</b><br>             <b>Chittoor</b><br>             State: ANDHRA PRADESH<br>             Growth Score: 18.52<br>             Internet HH: 13,763<br>             Electric HH: 944,555         </div>`)[0];
+                popup_fca81567ce06b6833b4ddfda8ee72e36.setContent(html_fccc30595744493844f4316464745f05);
+            
+        
+
+        circle_marker_18854664e2c7c44ef80c75bbf065f799.bindPopup(popup_fca81567ce06b6833b4ddfda8ee72e36)
+        ;
+
+        
+    
+    
+            circle_marker_18854664e2c7c44ef80c75bbf065f799.bindTooltip(
+                `<div>
+                     #50 Chittoor — Score: 18.52
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ea4e192876c96c191282582787b16ab4 = L.circleMarker(
+                [12.771219680425181, 76.73874181023578],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0389070f499ddf5e437106ba13db3a4d);
+        
+    
+        var popup_71cb7eacf6ef135b574804d730608f5d = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_043026871b283876c658be6a81f5b79d = $(`<div id="html_043026871b283876c658be6a81f5b79d" style="width: 100.0%; height: 100.0%;">             <b>Rank #51</b><br>             <b>Belgaum</b><br>             State: KARNATAKA<br>             Growth Score: 18.34<br>             Internet HH: 17,560<br>             Electric HH: 808,827         </div>`)[0];
+                popup_71cb7eacf6ef135b574804d730608f5d.setContent(html_043026871b283876c658be6a81f5b79d);
+            
+        
+
+        circle_marker_ea4e192876c96c191282582787b16ab4.bindPopup(popup_71cb7eacf6ef135b574804d730608f5d)
+        ;
+
+        
+    
+    
+            circle_marker_ea4e192876c96c191282582787b16ab4.bindTooltip(
+                `<div>
+                     #51 Belgaum — Score: 18.34
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_744774c963fb66b68fcd62cd43d11105 = L.circleMarker(
+                [12.192247889325001, 79.17028821853515],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0389070f499ddf5e437106ba13db3a4d);
+        
+    
+        var popup_4b9849e6dc6f92a93535ccfd41349a97 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_3ee27b559dc4fafaa055a32b8213aae9 = $(`<div id="html_3ee27b559dc4fafaa055a32b8213aae9" style="width: 100.0%; height: 100.0%;">             <b>Rank #52</b><br>             <b>Tirunelveli</b><br>             State: TAMIL NADU<br>             Growth Score: 18.17<br>             Internet HH: 19,070<br>             Electric HH: 779,130         </div>`)[0];
+                popup_4b9849e6dc6f92a93535ccfd41349a97.setContent(html_3ee27b559dc4fafaa055a32b8213aae9);
+            
+        
+
+        circle_marker_744774c963fb66b68fcd62cd43d11105.bindPopup(popup_4b9849e6dc6f92a93535ccfd41349a97)
+        ;
+
+        
+    
+    
+            circle_marker_744774c963fb66b68fcd62cd43d11105.bindTooltip(
+                `<div>
+                     #52 Tirunelveli — Score: 18.17
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b1f626c0c982db9ab633e8954d25a9b3 = L.circleMarker(
+                [16.307910516017724, 81.49089167598314],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0389070f499ddf5e437106ba13db3a4d);
+        
+    
+        var popup_6acb716c9a84f832a40bfd6a98cf6733 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_d6ea73596c657ae4311a38a2886b88bd = $(`<div id="html_d6ea73596c657ae4311a38a2886b88bd" style="width: 100.0%; height: 100.0%;">             <b>Rank #53</b><br>             <b>Karimnagar</b><br>             State: ANDHRA PRADESH<br>             Growth Score: 18.12<br>             Internet HH: 8,831<br>             Electric HH: 926,768         </div>`)[0];
+                popup_6acb716c9a84f832a40bfd6a98cf6733.setContent(html_d6ea73596c657ae4311a38a2886b88bd);
+            
+        
+
+        circle_marker_b1f626c0c982db9ab633e8954d25a9b3.bindPopup(popup_6acb716c9a84f832a40bfd6a98cf6733)
+        ;
+
+        
+    
+    
+            circle_marker_b1f626c0c982db9ab633e8954d25a9b3.bindTooltip(
+                `<div>
+                     #53 Karimnagar — Score: 18.12
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ef8f21436ffcf29533b80167d135383c = L.circleMarker(
+                [11.150117165618388, 77.16283188701912],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0389070f499ddf5e437106ba13db3a4d);
+        
+    
+        var popup_01395b9d967fb50bac426e9b326a7e7c = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_0be72f31db552d6c03a88dda39f98eba = $(`<div id="html_0be72f31db552d6c03a88dda39f98eba" style="width: 100.0%; height: 100.0%;">             <b>Rank #54</b><br>             <b>Tiruchirappalli</b><br>             State: TAMIL NADU<br>             Growth Score: 17.95<br>             Internet HH: 30,046<br>             Electric HH: 651,621         </div>`)[0];
+                popup_01395b9d967fb50bac426e9b326a7e7c.setContent(html_0be72f31db552d6c03a88dda39f98eba);
+            
+        
+
+        circle_marker_ef8f21436ffcf29533b80167d135383c.bindPopup(popup_01395b9d967fb50bac426e9b326a7e7c)
+        ;
+
+        
+    
+    
+            circle_marker_ef8f21436ffcf29533b80167d135383c.bindTooltip(
+                `<div>
+                     #54 Tiruchirappalli — Score: 17.95
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5511a8de28777081a844e6f06abbfe92 = L.circleMarker(
+                [14.987385716846296, 78.58058559860166],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0389070f499ddf5e437106ba13db3a4d);
+        
+    
+        var popup_588d7f7fbdfd1b0938b1f21db4be2ca3 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_86d24d088458dc51f304584ad9e60904 = $(`<div id="html_86d24d088458dc51f304584ad9e60904" style="width: 100.0%; height: 100.0%;">             <b>Rank #55</b><br>             <b>West Godavari</b><br>             State: ANDHRA PRADESH<br>             Growth Score: 17.88<br>             Internet HH: 12,050<br>             Electric HH: 1,017,568         </div>`)[0];
+                popup_588d7f7fbdfd1b0938b1f21db4be2ca3.setContent(html_86d24d088458dc51f304584ad9e60904);
+            
+        
+
+        circle_marker_5511a8de28777081a844e6f06abbfe92.bindPopup(popup_588d7f7fbdfd1b0938b1f21db4be2ca3)
+        ;
+
+        
+    
+    
+            circle_marker_5511a8de28777081a844e6f06abbfe92.bindTooltip(
+                `<div>
+                     #55 West Godavari — Score: 17.88
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_bf819c915e91e878a0cd32791d321755 = L.circleMarker(
+                [18.14678645840777, 76.4620608361729],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0389070f499ddf5e437106ba13db3a4d);
+        
+    
+        var popup_28f85776767c6ae363c98102b740daba = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_1e97f260322bbf503388987f0efd5c28 = $(`<div id="html_1e97f260322bbf503388987f0efd5c28" style="width: 100.0%; height: 100.0%;">             <b>Rank #56</b><br>             <b>Jalgaon</b><br>             State: MAHARASHTRA<br>             Growth Score: 17.58<br>             Internet HH: 14,297<br>             Electric HH: 720,791         </div>`)[0];
+                popup_28f85776767c6ae363c98102b740daba.setContent(html_1e97f260322bbf503388987f0efd5c28);
+            
+        
+
+        circle_marker_bf819c915e91e878a0cd32791d321755.bindPopup(popup_28f85776767c6ae363c98102b740daba)
+        ;
+
+        
+    
+    
+            circle_marker_bf819c915e91e878a0cd32791d321755.bindTooltip(
+                `<div>
+                     #56 Jalgaon — Score: 17.58
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_721c5968abfb2961e63282d4a79a9999 = L.circleMarker(
+                [17.548015057714796, 75.27213366418228],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0389070f499ddf5e437106ba13db3a4d);
+        
+    
+        var popup_bd2544bc70064cb1cc98975dd2c4cbd7 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_6709b69dde86b78a6d30d20ab89ec29e = $(`<div id="html_6709b69dde86b78a6d30d20ab89ec29e" style="width: 100.0%; height: 100.0%;">             <b>Rank #57</b><br>             <b>Aurangabad</b><br>             State: MAHARASHTRA<br>             Growth Score: 17.42<br>             Internet HH: 23,258<br>             Electric HH: 589,477         </div>`)[0];
+                popup_bd2544bc70064cb1cc98975dd2c4cbd7.setContent(html_6709b69dde86b78a6d30d20ab89ec29e);
+            
+        
+
+        circle_marker_721c5968abfb2961e63282d4a79a9999.bindPopup(popup_bd2544bc70064cb1cc98975dd2c4cbd7)
+        ;
+
+        
+    
+    
+            circle_marker_721c5968abfb2961e63282d4a79a9999.bindTooltip(
+                `<div>
+                     #57 Aurangabad — Score: 17.42
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6518f080cf7ffb5c75733340d19da6df = L.circleMarker(
+                [9.729224956791949, 75.35123669520652],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0389070f499ddf5e437106ba13db3a4d);
+        
+    
+        var popup_c9ae941fcddd369e90c66e450a67057b = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_6eccfaac2d1611440afce84cc79f30de = $(`<div id="html_6eccfaac2d1611440afce84cc79f30de" style="width: 100.0%; height: 100.0%;">             <b>Rank #58</b><br>             <b>Malappuram</b><br>             State: KERALA<br>             Growth Score: 17.3<br>             Internet HH: 27,909<br>             Electric HH: 730,119         </div>`)[0];
+                popup_c9ae941fcddd369e90c66e450a67057b.setContent(html_6eccfaac2d1611440afce84cc79f30de);
+            
+        
+
+        circle_marker_6518f080cf7ffb5c75733340d19da6df.bindPopup(popup_c9ae941fcddd369e90c66e450a67057b)
+        ;
+
+        
+    
+    
+            circle_marker_6518f080cf7ffb5c75733340d19da6df.bindTooltip(
+                `<div>
+                     #58 Malappuram — Score: 17.3
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5262ffb473119adbbc33453ebe5ba9c9 = L.circleMarker(
+                [17.977976079133192, 77.06597448065425],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0389070f499ddf5e437106ba13db3a4d);
+        
+    
+        var popup_b021bc4c635bda44a91011f0fe1d4a77 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_389d115efe15bd9263d15f12c79dea6d = $(`<div id="html_389d115efe15bd9263d15f12c79dea6d" style="width: 100.0%; height: 100.0%;">             <b>Rank #59</b><br>             <b>Solapur</b><br>             State: MAHARASHTRA<br>             Growth Score: 17.27<br>             Internet HH: 15,145<br>             Electric HH: 595,560         </div>`)[0];
+                popup_b021bc4c635bda44a91011f0fe1d4a77.setContent(html_389d115efe15bd9263d15f12c79dea6d);
+            
+        
+
+        circle_marker_5262ffb473119adbbc33453ebe5ba9c9.bindPopup(popup_b021bc4c635bda44a91011f0fe1d4a77)
+        ;
+
+        
+    
+    
+            circle_marker_5262ffb473119adbbc33453ebe5ba9c9.bindTooltip(
+                `<div>
+                     #59 Solapur — Score: 17.27
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ff7d5132120bcfe1ac0c3ce724067c7e = L.circleMarker(
+                [28.903409103206897, 78.16227219298024],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0389070f499ddf5e437106ba13db3a4d);
+        
+    
+        var popup_95e083fdbbc8ef09acbef480c0048da6 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_d6c25678bcc352dbfd65a19ad0d4cf43 = $(`<div id="html_d6c25678bcc352dbfd65a19ad0d4cf43" style="width: 100.0%; height: 100.0%;">             <b>Rank #60</b><br>             <b>East</b><br>             State: NCT OF DELHI<br>             Growth Score: 17.02<br>             Internet HH: 80,037<br>             Electric HH: 352,758         </div>`)[0];
+                popup_95e083fdbbc8ef09acbef480c0048da6.setContent(html_d6c25678bcc352dbfd65a19ad0d4cf43);
+            
+        
+
+        circle_marker_ff7d5132120bcfe1ac0c3ce724067c7e.bindPopup(popup_95e083fdbbc8ef09acbef480c0048da6)
+        ;
+
+        
+    
+    
+            circle_marker_ff7d5132120bcfe1ac0c3ce724067c7e.bindTooltip(
+                `<div>
+                     #60 East — Score: 17.02
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_691325a4edf3799b51f1fb3076a29b7e = L.circleMarker(
+                [26.867176319587514, 79.48773870868894],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0389070f499ddf5e437106ba13db3a4d);
+        
+    
+        var popup_db98ba58532877202270c7b86e5997f1 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_105951d90483583b51ff37e3ad11483e = $(`<div id="html_105951d90483583b51ff37e3ad11483e" style="width: 100.0%; height: 100.0%;">             <b>Rank #61</b><br>             <b>Agra</b><br>             State: UTTAR PRADESH<br>             Growth Score: 16.5<br>             Internet HH: 27,183<br>             Electric HH: 536,402         </div>`)[0];
+                popup_db98ba58532877202270c7b86e5997f1.setContent(html_105951d90483583b51ff37e3ad11483e);
+            
+        
+
+        circle_marker_691325a4edf3799b51f1fb3076a29b7e.bindPopup(popup_db98ba58532877202270c7b86e5997f1)
+        ;
+
+        
+    
+    
+            circle_marker_691325a4edf3799b51f1fb3076a29b7e.bindTooltip(
+                `<div>
+                     #61 Agra — Score: 16.5
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_345b5167e58493c6d6f07cb1ec987edd = L.circleMarker(
+                [9.81225258231303, 77.10062733651677],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0389070f499ddf5e437106ba13db3a4d);
+        
+    
+        var popup_ff1d0a833be4e62381c69b6cd33dcadf = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_ce624b5aadd7827f1c60afa49a3f6584 = $(`<div id="html_ce624b5aadd7827f1c60afa49a3f6584" style="width: 100.0%; height: 100.0%;">             <b>Rank #62</b><br>             <b>Erode</b><br>             State: TAMIL NADU<br>             Growth Score: 16.28<br>             Internet HH: 18,604<br>             Electric HH: 595,211         </div>`)[0];
+                popup_ff1d0a833be4e62381c69b6cd33dcadf.setContent(html_ce624b5aadd7827f1c60afa49a3f6584);
+            
+        
+
+        circle_marker_345b5167e58493c6d6f07cb1ec987edd.bindPopup(popup_ff1d0a833be4e62381c69b6cd33dcadf)
+        ;
+
+        
+    
+    
+            circle_marker_345b5167e58493c6d6f07cb1ec987edd.bindTooltip(
+                `<div>
+                     #62 Erode — Score: 16.28
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ed0a0798539cba43e56c3ca0b252238f = L.circleMarker(
+                [15.417806454407131, 79.7060813084572],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0389070f499ddf5e437106ba13db3a4d);
+        
+    
+        var popup_5aed23370928dffd69f7d0ede5fc9d78 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_82101e65cf78704d059325ede42681bb = $(`<div id="html_82101e65cf78704d059325ede42681bb" style="width: 100.0%; height: 100.0%;">             <b>Rank #63</b><br>             <b>Warangal</b><br>             State: ANDHRA PRADESH<br>             Growth Score: 16.19<br>             Internet HH: 12,952<br>             Electric HH: 828,077         </div>`)[0];
+                popup_5aed23370928dffd69f7d0ede5fc9d78.setContent(html_82101e65cf78704d059325ede42681bb);
+            
+        
+
+        circle_marker_ed0a0798539cba43e56c3ca0b252238f.bindPopup(popup_5aed23370928dffd69f7d0ede5fc9d78)
+        ;
+
+        
+    
+    
+            circle_marker_ed0a0798539cba43e56c3ca0b252238f.bindTooltip(
+                `<div>
+                     #63 Warangal — Score: 16.19
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_98542b279c4023038778b6bc63340429 = L.circleMarker(
+                [11.764521721835836, 77.88291523626255],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0389070f499ddf5e437106ba13db3a4d);
+        
+    
+        var popup_44bfa25cfedf7350f2dc363daa2d0f81 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_7839e8af7fca13835a3edb9ee87a7a18 = $(`<div id="html_7839e8af7fca13835a3edb9ee87a7a18" style="width: 100.0%; height: 100.0%;">             <b>Rank #64</b><br>             <b>Kozhikode</b><br>             State: KERALA<br>             Growth Score: 16.18<br>             Internet HH: 36,791<br>             Electric HH: 641,660         </div>`)[0];
+                popup_44bfa25cfedf7350f2dc363daa2d0f81.setContent(html_7839e8af7fca13835a3edb9ee87a7a18);
+            
+        
+
+        circle_marker_98542b279c4023038778b6bc63340429.bindPopup(popup_44bfa25cfedf7350f2dc363daa2d0f81)
+        ;
+
+        
+    
+    
+            circle_marker_98542b279c4023038778b6bc63340429.bindTooltip(
+                `<div>
+                     #64 Kozhikode — Score: 16.18
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_53df076737646d2f26a751f36bbaaacb = L.circleMarker(
+                [14.795243790781717, 75.52697609985417],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0389070f499ddf5e437106ba13db3a4d);
+        
+    
+        var popup_d84fb383c9f68db59475057b6f3bb404 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_7ebb90173d96facc115b75fe2a2e4e61 = $(`<div id="html_7ebb90173d96facc115b75fe2a2e4e61" style="width: 100.0%; height: 100.0%;">             <b>Rank #65</b><br>             <b>Mysore</b><br>             State: KARNATAKA<br>             Growth Score: 16.11<br>             Internet HH: 28,397<br>             Electric HH: 640,868         </div>`)[0];
+                popup_d84fb383c9f68db59475057b6f3bb404.setContent(html_7ebb90173d96facc115b75fe2a2e4e61);
+            
+        
+
+        circle_marker_53df076737646d2f26a751f36bbaaacb.bindPopup(popup_d84fb383c9f68db59475057b6f3bb404)
+        ;
+
+        
+    
+    
+            circle_marker_53df076737646d2f26a751f36bbaaacb.bindTooltip(
+                `<div>
+                     #65 Mysore — Score: 16.11
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_bf1c989101fc6580de2bb8256500bcb2 = L.circleMarker(
+                [17.682262945174326, 75.78502796629279],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0389070f499ddf5e437106ba13db3a4d);
+        
+    
+        var popup_f4c161c7ee1e68561019de4933dd9d50 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_2b101417aca6fa1e9ca66df8a6d589e2 = $(`<div id="html_2b101417aca6fa1e9ca66df8a6d589e2" style="width: 100.0%; height: 100.0%;">             <b>Rank #66</b><br>             <b>Raigarh</b><br>             State: MAHARASHTRA<br>             Growth Score: 16.08<br>             Internet HH: 38,570<br>             Electric HH: 547,206         </div>`)[0];
+                popup_f4c161c7ee1e68561019de4933dd9d50.setContent(html_2b101417aca6fa1e9ca66df8a6d589e2);
+            
+        
+
+        circle_marker_bf1c989101fc6580de2bb8256500bcb2.bindPopup(popup_f4c161c7ee1e68561019de4933dd9d50)
+        ;
+
+        
+    
+    
+            circle_marker_bf1c989101fc6580de2bb8256500bcb2.bindTooltip(
+                `<div>
+                     #66 Raigarh — Score: 16.08
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d44ec96eb2af89c08a3b1213c0dc8a68 = L.circleMarker(
+                [30.32591028113391, 75.56345373093627],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0389070f499ddf5e437106ba13db3a4d);
+        
+    
+        var popup_8f7d9d023e03f34cb148e1e773f2fa34 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_b5d158e3b3709c364ceaf5f4a2a37362 = $(`<div id="html_b5d158e3b3709c364ceaf5f4a2a37362" style="width: 100.0%; height: 100.0%;">             <b>Rank #67</b><br>             <b>Jalandhar</b><br>             State: PUNJAB<br>             Growth Score: 16.01<br>             Internet HH: 39,082<br>             Electric HH: 446,200         </div>`)[0];
+                popup_8f7d9d023e03f34cb148e1e773f2fa34.setContent(html_b5d158e3b3709c364ceaf5f4a2a37362);
+            
+        
+
+        circle_marker_d44ec96eb2af89c08a3b1213c0dc8a68.bindPopup(popup_8f7d9d023e03f34cb148e1e773f2fa34)
+        ;
+
+        
+    
+    
+            circle_marker_d44ec96eb2af89c08a3b1213c0dc8a68.bindTooltip(
+                `<div>
+                     #67 Jalandhar — Score: 16.01
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_00ad490a09263240b91ecf678b1adbf5 = L.circleMarker(
+                [20.48873504429687, 71.36048243094432],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0389070f499ddf5e437106ba13db3a4d);
+        
+    
+        var popup_2c5e4cf1a20ae9631e73508e792ec144 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_7fb540253e7ad3b49dc4e45c85bec972 = $(`<div id="html_7fb540253e7ad3b49dc4e45c85bec972" style="width: 100.0%; height: 100.0%;">             <b>Rank #68</b><br>             <b>Daman</b><br>             State: DAMAN AND DIU<br>             Growth Score: 15.75<br>             Internet HH: 1,316<br>             Electric HH: 49,249         </div>`)[0];
+                popup_2c5e4cf1a20ae9631e73508e792ec144.setContent(html_7fb540253e7ad3b49dc4e45c85bec972);
+            
+        
+
+        circle_marker_00ad490a09263240b91ecf678b1adbf5.bindPopup(popup_2c5e4cf1a20ae9631e73508e792ec144)
+        ;
+
+        
+    
+    
+            circle_marker_00ad490a09263240b91ecf678b1adbf5.bindTooltip(
+                `<div>
+                     #68 Daman — Score: 15.75
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_95196ab12a3e6e127083425c40e770bb = L.circleMarker(
+                [11.353759017095866, 77.63122617093514],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0389070f499ddf5e437106ba13db3a4d);
+        
+    
+        var popup_2cab5435912fe1dd05bf9955e6e1c103 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_664fc4600ed39ef9b0ebf98f2a3b87fa = $(`<div id="html_664fc4600ed39ef9b0ebf98f2a3b87fa" style="width: 100.0%; height: 100.0%;">             <b>Rank #69</b><br>             <b>Viluppuram</b><br>             State: TAMIL NADU<br>             Growth Score: 15.47<br>             Internet HH: 8,472<br>             Electric HH: 748,444         </div>`)[0];
+                popup_2cab5435912fe1dd05bf9955e6e1c103.setContent(html_664fc4600ed39ef9b0ebf98f2a3b87fa);
+            
+        
+
+        circle_marker_95196ab12a3e6e127083425c40e770bb.bindPopup(popup_2cab5435912fe1dd05bf9955e6e1c103)
+        ;
+
+        
+    
+    
+            circle_marker_95196ab12a3e6e127083425c40e770bb.bindTooltip(
+                `<div>
+                     #69 Viluppuram — Score: 15.47
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9699a0efa61f4b2de64f8f740a50a46f = L.circleMarker(
+                [9.79707571172999, 75.69574344089769],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0389070f499ddf5e437106ba13db3a4d);
+        
+    
+        var popup_fbaa9c5665c65c3ac3d82976e282c5b4 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_adc355bc36fbf29964d7ac95c3ae71c5 = $(`<div id="html_adc355bc36fbf29964d7ac95c3ae71c5" style="width: 100.0%; height: 100.0%;">             <b>Rank #70</b><br>             <b>Kollam</b><br>             State: KERALA<br>             Growth Score: 15.43<br>             Internet HH: 31,542<br>             Electric HH: 630,767         </div>`)[0];
+                popup_fbaa9c5665c65c3ac3d82976e282c5b4.setContent(html_adc355bc36fbf29964d7ac95c3ae71c5);
+            
+        
+
+        circle_marker_9699a0efa61f4b2de64f8f740a50a46f.bindPopup(popup_fbaa9c5665c65c3ac3d82976e282c5b4)
+        ;
+
+        
+    
+    
+            circle_marker_9699a0efa61f4b2de64f8f740a50a46f.bindTooltip(
+                `<div>
+                     #70 Kollam — Score: 15.43
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3b1efee7652615893f7b07c769ee4d20 = L.circleMarker(
+                [14.635341237497911, 79.72603858945673],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0389070f499ddf5e437106ba13db3a4d);
+        
+    
+        var popup_9973acdbee453c8dfe9a01b6974e55d7 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_46fa1e93922ac7185fff5f934f95be93 = $(`<div id="html_46fa1e93922ac7185fff5f934f95be93" style="width: 100.0%; height: 100.0%;">             <b>Rank #71</b><br>             <b>Anantapur</b><br>             State: ANDHRA PRADESH<br>             Growth Score: 15.35<br>             Internet HH: 8,606<br>             Electric HH: 897,970         </div>`)[0];
+                popup_9973acdbee453c8dfe9a01b6974e55d7.setContent(html_46fa1e93922ac7185fff5f934f95be93);
+            
+        
+
+        circle_marker_3b1efee7652615893f7b07c769ee4d20.bindPopup(popup_9973acdbee453c8dfe9a01b6974e55d7)
+        ;
+
+        
+    
+    
+            circle_marker_3b1efee7652615893f7b07c769ee4d20.bindTooltip(
+                `<div>
+                     #71 Anantapur — Score: 15.35
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_107ff2d8539ac1148fe91da4f46d2d50 = L.circleMarker(
+                [22.486457085662973, 88.46227923624116],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0389070f499ddf5e437106ba13db3a4d);
+        
+    
+        var popup_a49179af7ed37590ecfd4a7a01fad929 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_3fe770b710cd068339dd10ad7e40c27c = $(`<div id="html_3fe770b710cd068339dd10ad7e40c27c" style="width: 100.0%; height: 100.0%;">             <b>Rank #72</b><br>             <b>Nadia</b><br>             State: WEST BENGAL<br>             Growth Score: 15.3<br>             Internet HH: 12,787<br>             Electric HH: 623,729         </div>`)[0];
+                popup_a49179af7ed37590ecfd4a7a01fad929.setContent(html_3fe770b710cd068339dd10ad7e40c27c);
+            
+        
+
+        circle_marker_107ff2d8539ac1148fe91da4f46d2d50.bindPopup(popup_a49179af7ed37590ecfd4a7a01fad929)
+        ;
+
+        
+    
+    
+            circle_marker_107ff2d8539ac1148fe91da4f46d2d50.bindTooltip(
+                `<div>
+                     #72 Nadia — Score: 15.3
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_56e07a81b87c503d593bb6e989feca98 = L.circleMarker(
+                [22.38599239239566, 86.90219064052083],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0389070f499ddf5e437106ba13db3a4d);
+        
+    
+        var popup_d39ab9e8c923389c7c8e3268f3ca499e = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_ffbb47e6b04c6a832d8ef15a62413abd = $(`<div id="html_ffbb47e6b04c6a832d8ef15a62413abd" style="width: 100.0%; height: 100.0%;">             <b>Rank #73</b><br>             <b>Paschim Medinipur</b><br>             State: WEST BENGAL<br>             Growth Score: 15.24<br>             Internet HH: 8,970<br>             Electric HH: 663,811         </div>`)[0];
+                popup_d39ab9e8c923389c7c8e3268f3ca499e.setContent(html_ffbb47e6b04c6a832d8ef15a62413abd);
+            
+        
+
+        circle_marker_56e07a81b87c503d593bb6e989feca98.bindPopup(popup_d39ab9e8c923389c7c8e3268f3ca499e)
+        ;
+
+        
+    
+    
+            circle_marker_56e07a81b87c503d593bb6e989feca98.bindTooltip(
+                `<div>
+                     #73 Paschim Medinipur — Score: 15.24
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8db057acd7dcb00ca46beb19c640ceef = L.circleMarker(
+                [18.899681239688437, 76.8727277026736],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0389070f499ddf5e437106ba13db3a4d);
+        
+    
+        var popup_fd0364ad6b4d0d6add5bf6627d3d67d2 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_c280c8398b7c698edabd5300e69aa225 = $(`<div id="html_c280c8398b7c698edabd5300e69aa225" style="width: 100.0%; height: 100.0%;">             <b>Rank #74</b><br>             <b>Satara</b><br>             State: MAHARASHTRA<br>             Growth Score: 15.16<br>             Internet HH: 14,093<br>             Electric HH: 562,653         </div>`)[0];
+                popup_fd0364ad6b4d0d6add5bf6627d3d67d2.setContent(html_c280c8398b7c698edabd5300e69aa225);
+            
+        
+
+        circle_marker_8db057acd7dcb00ca46beb19c640ceef.bindPopup(popup_fd0364ad6b4d0d6add5bf6627d3d67d2)
+        ;
+
+        
+    
+    
+            circle_marker_8db057acd7dcb00ca46beb19c640ceef.bindTooltip(
+                `<div>
+                     #74 Satara — Score: 15.16
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b06a3f991cc6fa620da89434f70f2a56 = L.circleMarker(
+                [16.081562760225616, 80.79141682303293],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0389070f499ddf5e437106ba13db3a4d);
+        
+    
+        var popup_a3f2791d5a9c762dc62a6ed00d244266 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_754b7368a2bc06b3da3f4aa9252c372a = $(`<div id="html_754b7368a2bc06b3da3f4aa9252c372a" style="width: 100.0%; height: 100.0%;">             <b>Rank #75</b><br>             <b>Nalgonda</b><br>             State: ANDHRA PRADESH<br>             Growth Score: 15.11<br>             Internet HH: 7,715<br>             Electric HH: 789,225         </div>`)[0];
+                popup_a3f2791d5a9c762dc62a6ed00d244266.setContent(html_754b7368a2bc06b3da3f4aa9252c372a);
+            
+        
+
+        circle_marker_b06a3f991cc6fa620da89434f70f2a56.bindPopup(popup_a3f2791d5a9c762dc62a6ed00d244266)
+        ;
+
+        
+    
+    
+            circle_marker_b06a3f991cc6fa620da89434f70f2a56.bindTooltip(
+                `<div>
+                     #75 Nalgonda — Score: 15.11
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3dbaed77e23f160907dc60d74df8553d = L.circleMarker(
+                [23.920493243042625, 78.0304660188184],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0389070f499ddf5e437106ba13db3a4d);
+        
+    
+        var popup_2985ff0e2224ab12e3e2b945fda56a38 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_3ab0e59b096eba8842afa0c43ece1ee3 = $(`<div id="html_3ab0e59b096eba8842afa0c43ece1ee3" style="width: 100.0%; height: 100.0%;">             <b>Rank #76</b><br>             <b>Bhopal</b><br>             State: MADHYA PRADESH<br>             Growth Score: 15.1<br>             Internet HH: 40,788<br>             Electric HH: 452,912         </div>`)[0];
+                popup_2985ff0e2224ab12e3e2b945fda56a38.setContent(html_3ab0e59b096eba8842afa0c43ece1ee3);
+            
+        
+
+        circle_marker_3dbaed77e23f160907dc60d74df8553d.bindPopup(popup_2985ff0e2224ab12e3e2b945fda56a38)
+        ;
+
+        
+    
+    
+            circle_marker_3dbaed77e23f160907dc60d74df8553d.bindTooltip(
+                `<div>
+                     #76 Bhopal — Score: 15.1
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d83caa27451f0516de4f56eed5ec3f6e = L.circleMarker(
+                [30.23574879654131, 75.03025928488731],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0389070f499ddf5e437106ba13db3a4d);
+        
+    
+        var popup_6f88e7cad967199a9058cf3ba509ef1a = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_92d27d91a58052cd6ce799e3f62d632d = $(`<div id="html_92d27d91a58052cd6ce799e3f62d632d" style="width: 100.0%; height: 100.0%;">             <b>Rank #77</b><br>             <b>Amritsar</b><br>             State: PUNJAB<br>             Growth Score: 15.0<br>             Internet HH: 29,961<br>             Electric HH: 461,231         </div>`)[0];
+                popup_6f88e7cad967199a9058cf3ba509ef1a.setContent(html_92d27d91a58052cd6ce799e3f62d632d);
+            
+        
+
+        circle_marker_d83caa27451f0516de4f56eed5ec3f6e.bindPopup(popup_6f88e7cad967199a9058cf3ba509ef1a)
+        ;
+
+        
+    
+    
+            circle_marker_d83caa27451f0516de4f56eed5ec3f6e.bindTooltip(
+                `<div>
+                     #77 Amritsar — Score: 15.0
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d5c125a78a2f4015befd75c30ae5b797 = L.circleMarker(
+                [21.924595321550253, 80.81628324136162],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0389070f499ddf5e437106ba13db3a4d);
+        
+    
+        var popup_3c8a2b929cd09c1663f4cca620520471 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_0391ede9997e28cdebb9e128c35d5d0c = $(`<div id="html_0391ede9997e28cdebb9e128c35d5d0c" style="width: 100.0%; height: 100.0%;">             <b>Rank #78</b><br>             <b>Raipur</b><br>             State: CHHATTISGARH<br>             Growth Score: 14.94<br>             Internet HH: 20,261<br>             Electric HH: 728,556         </div>`)[0];
+                popup_3c8a2b929cd09c1663f4cca620520471.setContent(html_0391ede9997e28cdebb9e128c35d5d0c);
+            
+        
+
+        circle_marker_d5c125a78a2f4015befd75c30ae5b797.bindPopup(popup_3c8a2b929cd09c1663f4cca620520471)
+        ;
+
+        
+    
+    
+            circle_marker_d5c125a78a2f4015befd75c30ae5b797.bindTooltip(
+                `<div>
+                     #78 Raipur — Score: 14.94
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a34f59638d0f2c1ec2c27d74540f4056 = L.circleMarker(
+                [20.60223188835244, 72.00958418139649],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0389070f499ddf5e437106ba13db3a4d);
+        
+    
+        var popup_024c3fc3173dc740b1f8db8d2ea46869 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_a93e79253393ea1638f218298f293b27 = $(`<div id="html_a93e79253393ea1638f218298f293b27" style="width: 100.0%; height: 100.0%;">             <b>Rank #79</b><br>             <b>Diu</b><br>             State: DAMAN AND DIU<br>             Growth Score: 14.86<br>             Internet HH: 368<br>             Electric HH: 10,575         </div>`)[0];
+                popup_024c3fc3173dc740b1f8db8d2ea46869.setContent(html_a93e79253393ea1638f218298f293b27);
+            
+        
+
+        circle_marker_a34f59638d0f2c1ec2c27d74540f4056.bindPopup(popup_024c3fc3173dc740b1f8db8d2ea46869)
+        ;
+
+        
+    
+    
+            circle_marker_a34f59638d0f2c1ec2c27d74540f4056.bindTooltip(
+                `<div>
+                     #79 Diu — Score: 14.86
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2e86a93d0fbeac74742dbf900dffd768 = L.circleMarker(
+                [24.093380368575083, 88.10499885822566],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0389070f499ddf5e437106ba13db3a4d);
+        
+    
+        var popup_94cc51a97b62a9d74af52ce47384ce13 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_6da1abaf9bda2f0536b86db7c73c7acf = $(`<div id="html_6da1abaf9bda2f0536b86db7c73c7acf" style="width: 100.0%; height: 100.0%;">             <b>Rank #80</b><br>             <b>Murshidabad</b><br>             State: WEST BENGAL<br>             Growth Score: 14.39<br>             Internet HH: 7,951<br>             Electric HH: 541,169         </div>`)[0];
+                popup_94cc51a97b62a9d74af52ce47384ce13.setContent(html_6da1abaf9bda2f0536b86db7c73c7acf);
+            
+        
+
+        circle_marker_2e86a93d0fbeac74742dbf900dffd768.bindPopup(popup_94cc51a97b62a9d74af52ce47384ce13)
+        ;
+
+        
+    
+    
+            circle_marker_2e86a93d0fbeac74742dbf900dffd768.bindTooltip(
+                `<div>
+                     #80 Murshidabad — Score: 14.39
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_885a5b133fc1d8b529913f461f35b291 = L.circleMarker(
+                [28.27474748720953, 81.39491435901995],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0389070f499ddf5e437106ba13db3a4d);
+        
+    
+        var popup_8dfd5630e0066fd425b0f32132313484 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_17b06f3fb545ab11101bea43913eaa1a = $(`<div id="html_17b06f3fb545ab11101bea43913eaa1a" style="width: 100.0%; height: 100.0%;">             <b>Rank #81</b><br>             <b>Meerut</b><br>             State: UTTAR PRADESH<br>             Growth Score: 14.38<br>             Internet HH: 23,717<br>             Electric HH: 425,624         </div>`)[0];
+                popup_8dfd5630e0066fd425b0f32132313484.setContent(html_17b06f3fb545ab11101bea43913eaa1a);
+            
+        
+
+        circle_marker_885a5b133fc1d8b529913f461f35b291.bindPopup(popup_8dfd5630e0066fd425b0f32132313484)
+        ;
+
+        
+    
+    
+            circle_marker_885a5b133fc1d8b529913f461f35b291.bindTooltip(
+                `<div>
+                     #81 Meerut — Score: 14.38
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1c2071ff93f3f97f9304f8b16d50df82 = L.circleMarker(
+                [16.192168651031874, 81.07589570596826],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0389070f499ddf5e437106ba13db3a4d);
+        
+    
+        var popup_974480d04882751bddea6e197e50d88b = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_2efd5f9fc7307a082bc415c9db841e04 = $(`<div id="html_2efd5f9fc7307a082bc415c9db841e04" style="width: 100.0%; height: 100.0%;">             <b>Rank #82</b><br>             <b>Kurnool</b><br>             State: ANDHRA PRADESH<br>             Growth Score: 14.37<br>             Internet HH: 10,081<br>             Electric HH: 816,721         </div>`)[0];
+                popup_974480d04882751bddea6e197e50d88b.setContent(html_2efd5f9fc7307a082bc415c9db841e04);
+            
+        
+
+        circle_marker_1c2071ff93f3f97f9304f8b16d50df82.bindPopup(popup_974480d04882751bddea6e197e50d88b)
+        ;
+
+        
+    
+    
+            circle_marker_1c2071ff93f3f97f9304f8b16d50df82.bindTooltip(
+                `<div>
+                     #82 Kurnool — Score: 14.37
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8d5795e9d41e82bb14895dea664de397 = L.circleMarker(
+                [10.548987365993415, 76.5745953184283],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0389070f499ddf5e437106ba13db3a4d);
+        
+    
+        var popup_6a21a135ffd1e9088a6340b6ad0b6e32 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_636bd1394efd36403d5f271c5f2f4f43 = $(`<div id="html_636bd1394efd36403d5f271c5f2f4f43" style="width: 100.0%; height: 100.0%;">             <b>Rank #83</b><br>             <b>Cuddalore</b><br>             State: TAMIL NADU<br>             Growth Score: 14.26<br>             Internet HH: 15,396<br>             Electric HH: 598,412         </div>`)[0];
+                popup_6a21a135ffd1e9088a6340b6ad0b6e32.setContent(html_636bd1394efd36403d5f271c5f2f4f43);
+            
+        
+
+        circle_marker_8d5795e9d41e82bb14895dea664de397.bindPopup(popup_6a21a135ffd1e9088a6340b6ad0b6e32)
+        ;
+
+        
+    
+    
+            circle_marker_8d5795e9d41e82bb14895dea664de397.bindTooltip(
+                `<div>
+                     #83 Cuddalore — Score: 14.26
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_298565759ea75f4a2525bec1764b2fd7 = L.circleMarker(
+                [28.963843933677474, 76.10059808699019],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0389070f499ddf5e437106ba13db3a4d);
+        
+    
+        var popup_b56567fc05684fdb6530333e96e7eab7 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_1142a0d123406a0e85e590b9830ace60 = $(`<div id="html_1142a0d123406a0e85e590b9830ace60" style="width: 100.0%; height: 100.0%;">             <b>Rank #84</b><br>             <b>North East</b><br>             State: NCT OF DELHI<br>             Growth Score: 13.96<br>             Internet HH: 30,390<br>             Electric HH: 391,951         </div>`)[0];
+                popup_b56567fc05684fdb6530333e96e7eab7.setContent(html_1142a0d123406a0e85e590b9830ace60);
+            
+        
+
+        circle_marker_298565759ea75f4a2525bec1764b2fd7.bindPopup(popup_b56567fc05684fdb6530333e96e7eab7)
+        ;
+
+        
+    
+    
+            circle_marker_298565759ea75f4a2525bec1764b2fd7.bindTooltip(
+                `<div>
+                     #84 North East — Score: 13.96
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1fb60bc7a13972239683b32c1e599343 = L.circleMarker(
+                [28.64170106242203, 75.4164594792403],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0389070f499ddf5e437106ba13db3a4d);
+        
+    
+        var popup_f4044832689839e0f58bd025cd3d1a65 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_f2dd3c0d5f5d8a803a660e5f72140e07 = $(`<div id="html_f2dd3c0d5f5d8a803a660e5f72140e07" style="width: 100.0%; height: 100.0%;">             <b>Rank #85</b><br>             <b>Faridabad</b><br>             State: HARYANA<br>             Growth Score: 13.84<br>             Internet HH: 43,437<br>             Electric HH: 333,171         </div>`)[0];
+                popup_f4044832689839e0f58bd025cd3d1a65.setContent(html_f2dd3c0d5f5d8a803a660e5f72140e07);
+            
+        
+
+        circle_marker_1fb60bc7a13972239683b32c1e599343.bindPopup(popup_f4044832689839e0f58bd025cd3d1a65)
+        ;
+
+        
+    
+    
+            circle_marker_1fb60bc7a13972239683b32c1e599343.bindTooltip(
+                `<div>
+                     #85 Faridabad — Score: 13.84
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_310472e8d7e73eaa775597bd4e78f0db = L.circleMarker(
+                [27.645590802389794, 79.23203271393903],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0389070f499ddf5e437106ba13db3a4d);
+        
+    
+        var popup_ace13e172bce9a4f8c5d37b766d37db5 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_37166d4ac589df44c6164042606c3254 = $(`<div id="html_37166d4ac589df44c6164042606c3254" style="width: 100.0%; height: 100.0%;">             <b>Rank #86</b><br>             <b>Varanasi</b><br>             State: UTTAR PRADESH<br>             Growth Score: 13.7<br>             Internet HH: 19,214<br>             Electric HH: 336,056         </div>`)[0];
+                popup_ace13e172bce9a4f8c5d37b766d37db5.setContent(html_37166d4ac589df44c6164042606c3254);
+            
+        
+
+        circle_marker_310472e8d7e73eaa775597bd4e78f0db.bindPopup(popup_ace13e172bce9a4f8c5d37b766d37db5)
+        ;
+
+        
+    
+    
+            circle_marker_310472e8d7e73eaa775597bd4e78f0db.bindTooltip(
+                `<div>
+                     #86 Varanasi — Score: 13.7
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_04c7bd12b0f79661d59f16a5f81534c9 = L.circleMarker(
+                [11.596412947652668, 76.17293834132897],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0389070f499ddf5e437106ba13db3a4d);
+        
+    
+        var popup_a5f587641855c82d1a44f548a730713c = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_a289c329cf4c387074b444dbc6d14086 = $(`<div id="html_a289c329cf4c387074b444dbc6d14086" style="width: 100.0%; height: 100.0%;">             <b>Rank #87</b><br>             <b>Palakkad</b><br>             State: KERALA<br>             Growth Score: 13.69<br>             Internet HH: 27,162<br>             Electric HH: 587,583         </div>`)[0];
+                popup_a5f587641855c82d1a44f548a730713c.setContent(html_a289c329cf4c387074b444dbc6d14086);
+            
+        
+
+        circle_marker_04c7bd12b0f79661d59f16a5f81534c9.bindPopup(popup_a5f587641855c82d1a44f548a730713c)
+        ;
+
+        
+    
+    
+            circle_marker_04c7bd12b0f79661d59f16a5f81534c9.bindTooltip(
+                `<div>
+                     #87 Palakkad — Score: 13.69
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7c7898308d0748ec481e9123133db12a = L.circleMarker(
+                [29.937304646057388, 75.95189786731764],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0389070f499ddf5e437106ba13db3a4d);
+        
+    
+        var popup_0dbbef242972b11c40bac6e4f69b18f9 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_636bddfefbc34ce2e7f5acaba9b995eb = $(`<div id="html_636bddfefbc34ce2e7f5acaba9b995eb" style="width: 100.0%; height: 100.0%;">             <b>Rank #88</b><br>             <b>Gurgaon</b><br>             State: HARYANA<br>             Growth Score: 13.62<br>             Internet HH: 67,087<br>             Electric HH: 305,751         </div>`)[0];
+                popup_0dbbef242972b11c40bac6e4f69b18f9.setContent(html_636bddfefbc34ce2e7f5acaba9b995eb);
+            
+        
+
+        circle_marker_7c7898308d0748ec481e9123133db12a.bindPopup(popup_0dbbef242972b11c40bac6e4f69b18f9)
+        ;
+
+        
+    
+    
+            circle_marker_7c7898308d0748ec481e9123133db12a.bindTooltip(
+                `<div>
+                     #88 Gurgaon — Score: 13.62
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_fbb32008c9845310481c8c9737dec50c = L.circleMarker(
+                [26.174218308793183, 80.6670033517179],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0389070f499ddf5e437106ba13db3a4d);
+        
+    
+        var popup_9cecc540a2945fc157731cfd7932595e = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_1f18e26550c3377e8dee2e9400502c45 = $(`<div id="html_1f18e26550c3377e8dee2e9400502c45" style="width: 100.0%; height: 100.0%;">             <b>Rank #89</b><br>             <b>Gorakhpur</b><br>             State: UTTAR PRADESH<br>             Growth Score: 13.55<br>             Internet HH: 14,597<br>             Electric HH: 296,619         </div>`)[0];
+                popup_9cecc540a2945fc157731cfd7932595e.setContent(html_1f18e26550c3377e8dee2e9400502c45);
+            
+        
+
+        circle_marker_fbb32008c9845310481c8c9737dec50c.bindPopup(popup_9cecc540a2945fc157731cfd7932595e)
+        ;
+
+        
+    
+    
+            circle_marker_fbb32008c9845310481c8c9737dec50c.bindTooltip(
+                `<div>
+                     #89 Gorakhpur — Score: 13.55
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_322ae057b35841ddf2f28dea639921b2 = L.circleMarker(
+                [11.04836886008171, 77.0147917297925],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0389070f499ddf5e437106ba13db3a4d);
+        
+    
+        var popup_3c0a79a7481ac84e4aade50956377bde = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_2017a5d7b3013cf1eb9dfba21fdd9d81 = $(`<div id="html_2017a5d7b3013cf1eb9dfba21fdd9d81" style="width: 100.0%; height: 100.0%;">             <b>Rank #90</b><br>             <b>Alappuzha</b><br>             State: KERALA<br>             Growth Score: 13.53<br>             Internet HH: 28,842<br>             Electric HH: 507,913         </div>`)[0];
+                popup_3c0a79a7481ac84e4aade50956377bde.setContent(html_2017a5d7b3013cf1eb9dfba21fdd9d81);
+            
+        
+
+        circle_marker_322ae057b35841ddf2f28dea639921b2.bindPopup(popup_3c0a79a7481ac84e4aade50956377bde)
+        ;
+
+        
+    
+    
+            circle_marker_322ae057b35841ddf2f28dea639921b2.bindTooltip(
+                `<div>
+                     #90 Alappuzha — Score: 13.53
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_26464830418652de3215c214d5a39b85 = L.circleMarker(
+                [16.318495417866945, 79.26471590919527],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0389070f499ddf5e437106ba13db3a4d);
+        
+    
+        var popup_26bb85a9f7df03874d74bdd61b760131 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_a52f26e5e02cfc8d7161c0a7b9b1a60b = $(`<div id="html_a52f26e5e02cfc8d7161c0a7b9b1a60b" style="width: 100.0%; height: 100.0%;">             <b>Rank #91</b><br>             <b>Mahbubnagar</b><br>             State: ANDHRA PRADESH<br>             Growth Score: 13.5<br>             Internet HH: 6,153<br>             Electric HH: 757,821         </div>`)[0];
+                popup_26bb85a9f7df03874d74bdd61b760131.setContent(html_a52f26e5e02cfc8d7161c0a7b9b1a60b);
+            
+        
+
+        circle_marker_26464830418652de3215c214d5a39b85.bindPopup(popup_26bb85a9f7df03874d74bdd61b760131)
+        ;
+
+        
+    
+    
+            circle_marker_26464830418652de3215c214d5a39b85.bindTooltip(
+                `<div>
+                     #91 Mahbubnagar — Score: 13.5
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_24bbb09fd308b71bae2b8a132b344aad = L.circleMarker(
+                [19.1605869794597, 76.78730582224043],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0389070f499ddf5e437106ba13db3a4d);
+        
+    
+        var popup_4d5dc25b5f21196445f53c80b86c4977 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_5435e7921d08ec489240327a52812045 = $(`<div id="html_5435e7921d08ec489240327a52812045" style="width: 100.0%; height: 100.0%;">             <b>Rank #92</b><br>             <b>Sangli</b><br>             State: MAHARASHTRA<br>             Growth Score: 13.48<br>             Internet HH: 13,212<br>             Electric HH: 485,126         </div>`)[0];
+                popup_4d5dc25b5f21196445f53c80b86c4977.setContent(html_5435e7921d08ec489240327a52812045);
+            
+        
+
+        circle_marker_24bbb09fd308b71bae2b8a132b344aad.bindPopup(popup_4d5dc25b5f21196445f53c80b86c4977)
+        ;
+
+        
+    
+    
+            circle_marker_24bbb09fd308b71bae2b8a132b344aad.bindTooltip(
+                `<div>
+                     #92 Sangli — Score: 13.48
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b7a9322ebf82529466aa9ad7f067cb02 = L.circleMarker(
+                [14.812091927750087, 80.98627671966793],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0389070f499ddf5e437106ba13db3a4d);
+        
+    
+        var popup_2b550e33d56ee4a221d837cc909765cf = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_2eb5e1c7e64faa8ff327995a8d50a77b = $(`<div id="html_2eb5e1c7e64faa8ff327995a8d50a77b" style="width: 100.0%; height: 100.0%;">             <b>Rank #93</b><br>             <b>Prakasam</b><br>             State: ANDHRA PRADESH<br>             Growth Score: 13.44<br>             Internet HH: 6,151<br>             Electric HH: 763,746         </div>`)[0];
+                popup_2b550e33d56ee4a221d837cc909765cf.setContent(html_2eb5e1c7e64faa8ff327995a8d50a77b);
+            
+        
+
+        circle_marker_b7a9322ebf82529466aa9ad7f067cb02.bindPopup(popup_2b550e33d56ee4a221d837cc909765cf)
+        ;
+
+        
+    
+    
+            circle_marker_b7a9322ebf82529466aa9ad7f067cb02.bindTooltip(
+                `<div>
+                     #93 Prakasam — Score: 13.44
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7acdf4e7f3a2787d5bab16b7619381f4 = L.circleMarker(
+                [27.082819067611187, 72.62746788902423],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0389070f499ddf5e437106ba13db3a4d);
+        
+    
+        var popup_3c3e8d44f460c9a53a78530b0b4b0054 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_691af55e04c4f33d958478822bfab625 = $(`<div id="html_691af55e04c4f33d958478822bfab625" style="width: 100.0%; height: 100.0%;">             <b>Rank #94</b><br>             <b>Alwar</b><br>             State: RAJASTHAN<br>             Growth Score: 13.35<br>             Internet HH: 9,750<br>             Electric HH: 485,723         </div>`)[0];
+                popup_3c3e8d44f460c9a53a78530b0b4b0054.setContent(html_691af55e04c4f33d958478822bfab625);
+            
+        
+
+        circle_marker_7acdf4e7f3a2787d5bab16b7619381f4.bindPopup(popup_3c3e8d44f460c9a53a78530b0b4b0054)
+        ;
+
+        
+    
+    
+            circle_marker_7acdf4e7f3a2787d5bab16b7619381f4.bindTooltip(
+                `<div>
+                     #94 Alwar — Score: 13.35
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_14ef86df15c7d5351d907833adf30665 = L.circleMarker(
+                [9.122972225725878, 76.90457960287664],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0389070f499ddf5e437106ba13db3a4d);
+        
+    
+        var popup_947968bfeff469bb2396d5dc20ad0225 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_3e0eeb79d60626819c7aae6a51c240f9 = $(`<div id="html_3e0eeb79d60626819c7aae6a51c240f9" style="width: 100.0%; height: 100.0%;">             <b>Rank #95</b><br>             <b>Kannur</b><br>             State: KERALA<br>             Growth Score: 13.33<br>             Internet HH: 32,653<br>             Electric HH: 511,167         </div>`)[0];
+                popup_947968bfeff469bb2396d5dc20ad0225.setContent(html_3e0eeb79d60626819c7aae6a51c240f9);
+            
+        
+
+        circle_marker_14ef86df15c7d5351d907833adf30665.bindPopup(popup_947968bfeff469bb2396d5dc20ad0225)
+        ;
+
+        
+    
+    
+            circle_marker_14ef86df15c7d5351d907833adf30665.bindTooltip(
+                `<div>
+                     #95 Kannur — Score: 13.33
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5c3f9ca8f1e1caef5d9d687c2b6659a3 = L.circleMarker(
+                [21.421761036715004, 82.29281729336344],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0389070f499ddf5e437106ba13db3a4d);
+        
+    
+        var popup_60890c2eea8c63bddce2beca4a6dcb35 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_ea2485b11156d699c86d3e5db7936037 = $(`<div id="html_ea2485b11156d699c86d3e5db7936037" style="width: 100.0%; height: 100.0%;">             <b>Rank #96</b><br>             <b>Durg</b><br>             State: CHHATTISGARH<br>             Growth Score: 13.24<br>             Internet HH: 16,141<br>             Electric HH: 614,109         </div>`)[0];
+                popup_60890c2eea8c63bddce2beca4a6dcb35.setContent(html_ea2485b11156d699c86d3e5db7936037);
+            
+        
+
+        circle_marker_5c3f9ca8f1e1caef5d9d687c2b6659a3.bindPopup(popup_60890c2eea8c63bddce2beca4a6dcb35)
+        ;
+
+        
+    
+    
+            circle_marker_5c3f9ca8f1e1caef5d9d687c2b6659a3.bindTooltip(
+                `<div>
+                     #96 Durg — Score: 13.24
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_72d6a01fd6c7e4ac44d21aff651a1f9e = L.circleMarker(
+                [11.207569124029817, 77.75932768599087],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0389070f499ddf5e437106ba13db3a4d);
+        
+    
+        var popup_fdc2294915b26eeafc45b0348fd28e2e = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_4076394d1bca3aceb07d84c95f4f339f = $(`<div id="html_4076394d1bca3aceb07d84c95f4f339f" style="width: 100.0%; height: 100.0%;">             <b>Rank #97</b><br>             <b>Kottayam</b><br>             State: KERALA<br>             Growth Score: 13.19<br>             Internet HH: 37,849<br>             Electric HH: 464,039         </div>`)[0];
+                popup_fdc2294915b26eeafc45b0348fd28e2e.setContent(html_4076394d1bca3aceb07d84c95f4f339f);
+            
+        
+
+        circle_marker_72d6a01fd6c7e4ac44d21aff651a1f9e.bindPopup(popup_fdc2294915b26eeafc45b0348fd28e2e)
+        ;
+
+        
+    
+    
+            circle_marker_72d6a01fd6c7e4ac44d21aff651a1f9e.bindTooltip(
+                `<div>
+                     #97 Kottayam — Score: 13.19
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a3c13477566721812db0b2e06b6f940b = L.circleMarker(
+                [10.528887453561397, 78.43618045358899],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0389070f499ddf5e437106ba13db3a4d);
+        
+    
+        var popup_881e56ad1b4ad0ed6b1ed96e5f2e85be = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_e5d42a154f60e43baa05d8ff05d57838 = $(`<div id="html_e5d42a154f60e43baa05d8ff05d57838" style="width: 100.0%; height: 100.0%;">             <b>Rank #98</b><br>             <b>Thanjavur</b><br>             State: TAMIL NADU<br>             Growth Score: 13.02<br>             Internet HH: 13,495<br>             Electric HH: 555,582         </div>`)[0];
+                popup_881e56ad1b4ad0ed6b1ed96e5f2e85be.setContent(html_e5d42a154f60e43baa05d8ff05d57838);
+            
+        
+
+        circle_marker_a3c13477566721812db0b2e06b6f940b.bindPopup(popup_881e56ad1b4ad0ed6b1ed96e5f2e85be)
+        ;
+
+        
+    
+    
+            circle_marker_a3c13477566721812db0b2e06b6f940b.bindTooltip(
+                `<div>
+                     #98 Thanjavur — Score: 13.02
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a915476a7ecfc4399649bb73b0d2153f = L.circleMarker(
+                [23.13696061829762, 88.30658580853586],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0389070f499ddf5e437106ba13db3a4d);
+        
+    
+        var popup_b67aed2a14e6194739f1ff9119a0cf9b = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_a48e605a7582aaaf14c9e8372021f679 = $(`<div id="html_a48e605a7582aaaf14c9e8372021f679" style="width: 100.0%; height: 100.0%;">             <b>Rank #99</b><br>             <b>Purba Medinipur</b><br>             State: WEST BENGAL<br>             Growth Score: 13.01<br>             Internet HH: 9,076<br>             Electric HH: 530,761         </div>`)[0];
+                popup_b67aed2a14e6194739f1ff9119a0cf9b.setContent(html_a48e605a7582aaaf14c9e8372021f679);
+            
+        
+
+        circle_marker_a915476a7ecfc4399649bb73b0d2153f.bindPopup(popup_b67aed2a14e6194739f1ff9119a0cf9b)
+        ;
+
+        
+    
+    
+            circle_marker_a915476a7ecfc4399649bb73b0d2153f.bindTooltip(
+                `<div>
+                     #99 Purba Medinipur — Score: 13.01
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_35c3845ace823de13065fb50c844562c = L.circleMarker(
+                [27.639824723336496, 73.13171244541243],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0389070f499ddf5e437106ba13db3a4d);
+        
+    
+        var popup_577dadf43a3e09fb296ee0a8c7c1aad8 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_eeb6d7e6afe2c2251a9ec78c0d251ec5 = $(`<div id="html_eeb6d7e6afe2c2251a9ec78c0d251ec5" style="width: 100.0%; height: 100.0%;">             <b>Rank #100</b><br>             <b>Jodhpur</b><br>             State: RAJASTHAN<br>             Growth Score: 12.89<br>             Internet HH: 19,335<br>             Electric HH: 408,808         </div>`)[0];
+                popup_577dadf43a3e09fb296ee0a8c7c1aad8.setContent(html_eeb6d7e6afe2c2251a9ec78c0d251ec5);
+            
+        
+
+        circle_marker_35c3845ace823de13065fb50c844562c.bindPopup(popup_577dadf43a3e09fb296ee0a8c7c1aad8)
+        ;
+
+        
+    
+    
+            circle_marker_35c3845ace823de13065fb50c844562c.bindTooltip(
+                `<div>
+                     #100 Jodhpur — Score: 12.89
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            marker_cluster_0389070f499ddf5e437106ba13db3a4d.addTo(map_cc4ff0169a51c78e84d39a276453897c);
+        
+</script>
+</html>
