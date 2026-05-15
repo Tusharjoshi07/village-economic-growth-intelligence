@@ -53,4 +53,10 @@ Python, Pandas, NumPy, Folium, Plotly, python-pptx
 - SHRUG dataset for village level data
 - Time series growth tracking
 
+## Live Interactive Visualizations
+- [🗺️ Interactive Map](https://tusharjoshi07.github.io/village-economic-growth-intelligence/village_growth_map.html)
+- [📊 Top 20 Districts](https://tusharjoshi07.github.io/village-economic-growth-intelligence/top20_chart.html)
+- [🥧 State Distribution](https://tusharjoshi07.github.io/village-economic-growth-intelligence/state_distribution.html)
+- [🔥 Growth Drivers Heatmap](https://tusharjoshi07.github.io/village-economic-growth-intelligence/heatmap.html)
+
 Submitted by: Tushar Joshi | May 2026
